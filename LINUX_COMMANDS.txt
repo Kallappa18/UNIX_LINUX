@@ -1,0 +1,4860 @@
+LINUX COMMAND LINE    (url to work on linux : bellard.org linux)
+===============================================
+1.PWD (Present working dirctory/print working dirctory)
+      --it prints the present location
+	  
+2.whoami
+      --prints the username
+	  
+3.date 
+     -date +%D,date +%T,date +%H:%M
+	 
+4.ls
+   --prints all the files and folders present in the directory
+   
+5.ls -lt
+  --prints files and folders with all the information like time ,name..
+  
+6 ls -ltr  (reverse listing)
+    --its shows recent files and folder in the end
+	
+7.ls -lh
+    -- human readable format it list all the files and folders
+
+8.clear 
+  --used to clear the console
+  --shortcut :ctrl+l
+  
+9.cat <file_name>
+      --to see/read the content of the file_name
+
+10.less <file_name>
+     --file open in the editor not in the terminal
+     --read a file and search for the word
+	 --(top to bottom search)after executing the less command use /seach_word, then enter to see searched word.
+	 -- press n to see the same word in the file in below lines
+     --control+g -> to go to end of the file
+	 --(bottom to top search),after executing the less command use ?search_word,then enter to see searched word.
+     --press p to return to initial place from the end.	
+ 	 --press q to quit.
+	 
+11.more <file_name>
+     --open the file in the terminal  
+	 --we can see the file page by page
+	 --down arrow to see next page
+	 
+12.touch <create_new_file>
+    --create new file
+	
+13.rm <file_name>
+     --used to delete the file
+
+14.  vi <new_file_name> or vi <existing_file_name>
+      --used to create file and edit file simultaneously
+      --after enter, press i to eit the file
+	  --after edit completed, press escape
+	  --to save ,shift+colon (:wq), then enter
+	  
+	  
+15. nano <file_name>
+      --used to edit the fie
+	  
+16.  mkdir <folder_name>
+         --to create new folder/directory
+		 
+17.   rmdir <folder_name>
+            and 
+      rm -rf <folder_name>
+       --to remove folder/directory
+	   
+18. cd <folder_name>
+    cd <directory_name>
+	cd .. (to go one step behind)
+	cd ../..(to go two step behind)
+      --to go to other path or folder or to change directory
+	  
+	cd /
+	  --using this command we will go to root directory
+	  
+	absolute path: (from root dirctory the path will start)
+	   cd /home/lenovo/unix_demo
+	   
+	 relative path:(we will get the path, that path related to previous path/directory)
+	      cd new_folder
+		  
+19.cp <file_name> <destination_directory>
+             -taking file , copying to destination_directory
+   cp ../file_name .
+             -going back to previou file and take the file and copying to current directory(.)
+			 
+   cp <fileA> <fileB>
+       --copying content of one file to other file
+	   
+20.mv <file_name> <destination_path>
+       --cut paste a file from one folder to another folder
+   mv <file_name> <renamed_file>
+   
+21.head -n <file_name>
+        --it displays top n lines in the file
+		--n is the number of lines
+21.tail -n <file_name>
+        --it displays bottom n lines in the file
+		--n is the number of lines
+
+22.sort <file_name>
+    --sorting the file
+   sort -r <file_name>
+    --reverse sorting the file.
+	
+23.sort <file_name> | uniq
+   --used to display the sorted and unique content from the file
+   
+24.file contains 9 lines,split this into 3 different files
+   split -l n <file_name>
+       --number of lines should display in each files
+	   
+25.grep "search_word" <file_name>
+    --used to search a word and display matching content from the file.
+	
+26.egrep "word1|word2" <file_name>
+   --used to search and display multiple word matching content from the file
+   
+27. *,[],{} wildcards used in linux
+
+    --if we want to list specific file in 10000 files, then we can use *
+      ls file*
+    --if we want to find files using file extension	 
+	  ls *.csv 
+    --we can use {} to create multiple files in touch command
+	  touch file{1..10}
+	  
+28 shuf <file-name>
+    --used to shuffle the order of the content in a file.
+	
+29. wc -l <file_name>
+      --it display the line count in the file
+	  
+30.cmp <file_name1> <file_name2>
+     --compare the two files are same or different
+	 --its display only files are same or not same, not all details
+31. diff <file_name1> <file_name2>
+     diff -u <file_name1> <file_name2>
+	   --it gives what and where the content is different in two files
+
+32. find <directory_path> -name <file_name>
+        --used to find the file in the system or directory
+
+33.updatedb
+   locate <file_name>
+     --if we created the new file, we have to execute the updatedb before locate command
+	 --locate is used to find the file in the directory\
+	 
+	 
+pwd
+    2  whoami
+    3  date
+    4  date +%D
+    5  date +%T
+    6  date +%H:%M
+    7  ls
+    8  ls -lt
+    9  ls -ltr
+   10  cd e:
+   11  pwd
+   12  ls
+   13  ls -lt
+   14  ls -ltr
+   15  ls -lh
+   16  cat
+   17  cat hibernateusageprocedure.txt
+   18  less hibernateusageprocedure.txt
+   19  ls
+   20  more packages.txt
+   21  more packages.txt
+   22  more hibernateusageprocedure.txt
+   23  touch new_FILE
+   24  ls
+   25  rm new_FILE
+   26  ls
+   27* vi
+   28  ls
+   29  cat NEW_FILE
+   30  vi packages.txt
+   31*  packages.txt
+   32  nano NEW_FILE
+   33  nano NEW_FILE
+   34  mkdir NEW_FOLDER123
+   35  mkdir NEW_FOLDER123/folder_in_folder/last_folder
+   36  mkdir NEW_FOLDER1234/folder_in_folder/last_folder
+   37  mkdir NEW_FOLDER123/folder_in
+   38  ls
+   39  cd NEW_FOLDER123
+   40  ls
+   41  rmdir folder_in
+   42  ls
+   43  rm -rf NEW_FOLDER123
+   44  /
+   45  :/
+   46  :
+   47  e:
+   48  cd \
+   49  cd /
+   50  pwd
+   51  cd :
+   52  cd e:
+   53  cd \
+   54  cd \
+   55  cd /
+   56  cd e:
+   57  cd /
+   58  pwd
+   59  cd e:
+   60  ls
+   61  cd NEW_FOLDER123
+   62  cd
+   63  cd e:
+   64  cd NEW_FOLDER123
+   65  cd /
+   66  cd e:
+   67  cd NEW_FOLDER123
+   68  e:
+   69  cd/
+   70  cd
+   71  cd :
+   72  cd e:
+   73  cd/
+   74  rm -rf NEW_FOLDER123
+   75  ls
+   76  cd seriese
+   77  ls
+   78  cd redmi 3s
+   79  cd 'redmi 3s'
+   80  ls
+   81  cd Musick
+   82  ls
+   83  cd ..
+   84  cd ../..
+   85  cd /
+   86  ls
+   87  cd home
+   88  ls
+   89  cd lenovo
+   90  ls
+   91  cd e:
+   92  ls
+   93  cd new_file
+   94  cd 'new folder'
+   95  touch new_file
+   96  cp packages.txt /'new folder'
+   97  cd ..
+   98  cp packages.txt /'new folder'
+   99  cd 'new folder'
+  100  ls
+  101  cp packages.txt 'new folder'
+  102  cd ..
+  103  cp packages.txt 'new folder'
+  104  cd 'new folder'
+  105  ls
+  106  cd ..
+  107  ls
+  108  cd 'new folder'
+  109  cp ../C_T_E .
+  110  cp ../'!qhlogs.doc' .
+  111  ls
+  112  cp packages.txt packages_copy.txt
+  113  ls
+  114  mv package_copy  /cygdrive/e/
+  115  mv package_copy.txt  /cygdrive/e/
+  116  mv packages_copy  /cygdrive/e/
+  117  mv packages_copy.txt  /cygdrive/e/
+  118  ls
+  119  cd ..
+  120  ls
+  121  mv packages_copy.txt  packages_copy_updated_name.txt
+  122  ls
+  123  cd 'new folder'
+  124  ls
+  125  head -3 packages.txt
+  126* vi
+  127  tail -10 packages.txt
+  128  vi packages.txt
+  129  cat packages.txt
+  130  clear
+  131  sort packages.txt
+  132  clear
+  133  touch file_sort
+  134  vi file_sort
+  135  cat file_sort
+  136  sort file_sort
+  137  sort -r file_sort
+  138  vi file_sort
+  139  cat file_sort
+  140  sort file_sort | uniq
+  141  split -l 5 file_sort
+  142  ls
+  143  cat xac
+  144  cat xaa
+  145  less packages.txt
+  146  grep "objects" packages.txt
+  147  grep "objects"|"accessible" packages.txt
+  148  grep "objects|accessible" packages.txt
+  149  egrep "objects|accessible" packages.txt
+  150  ls
+  151  ls xa*
+  152  ls *.txt
+  153  ls *.csv
+  154  touch file_name{1..10}
+  155  ls
+  156  cat packages.txt
+  157  shuf packages.txt
+  158  wc -l packages.txt
+  159  ls
+  160  vi file_name1
+  161  vi file_name1
+  162  vi file_name2
+  163  cat file_name2
+  164  cat file_name1
+  165  cmp file_name1 file_name2
+  166  vi file_name3
+  167  cat file_name3
+  168  cmp file_name1 file_name3
+  169  diff file_name1 file_name3
+  170  diff file_name1 file_name2
+  171  diff -u file_name1 file_name2
+  172  cd
+  173  find ./ -name packages.txt
+  174  cd e:
+  175  find ./ -name packages.txt
+  176  locate packages.txt
+  177  find /cygdrive/e/ -name packages.txt
+  178  cd 'new folder'
+  179  find /cygdrive/e/ -name packages.txt
+  180  locate packages.txt
+  181  ls
+  182  locate file_name1
+  183  cd ..
+  184  locate file_name1
+  185  find /cygdrive/e/ -name file_name1
+  186  updatedb
+  187  echo hi everyone
+  188  History
+  189  history
+	 
+	 ========================================================================================
+	                UTILITY COMMAND::
+					===============
+					
+1.history  --past commands we used in the linux
+  history
+  history | grep ls
+2.Help  --get the guidance to use commands
+    
+3.man   --more detail about the command
+   man <command_name>
+   
+4.bc  --calculator
+5.cal  --calender
+  --cal
+  --cal 2022
+  --cal jan 2022
+6.uptime --total time the linux system is up and running
+		 
+7.which  <command_name>
+    --to check which executable is using for a command 
+8.script
+   --used to record our activity on terminal in a file.
+   --ctrol+D to complete the script
+   
+9.alias l="ls -ltr"
+    --alias is used to make shortcuts for long commands
+  alias -p
+    --used see alias list
+
+10.gzip -k <file_name>
+      -used to compress the file,-k is indicates that source file will not remove
+    gunzip <zipped_file_name.gz>
+    gzip -d <zipped_file_name.gz>
+      --used to unzip or decompress the file
+	  --(-d) is indicates for decompression
+
+11.tar -czf myfiles.tar.gz <folder_name>
+         --in (-czf) c means compress, this command is used to compress folder
+   tar -xzf <zipped_file_name>
+         --decompress folder (-xzf) means extract
+
+12.zip <folder_name> <file1> <file2> ...
+        --multiples files zipped in a folder
+		
+   unzip <zipped_folder_name>
+         --extract files from zip folder
+	
+   unzip -l <zipped_folder_name>
+        --used to see files in the zip folder
+
+13. wget URL_OF_FILE
+    wget -O give_file_name.txt URL_OF_FILE  
+	  --used to download from the internet
+	  
+14. curl api_url
+      --call api on linux
+	ex:
+	$ curl http://numbersapi.com/random
+
+
+15 How to install applications on unix
+       --apt
+	   --yum/dnf
+	     yum install application_name
+		 
+16.How to check if an application is installed or not on Linux
+    --rpm -qa | grep application
+	 ex: rpm -qa | grep sql
+	--dnf list installed | grep application
+
+17.How to check available packages on linux 
+   yum list available  --pacakges for all the applications
+   yum list available | grep application
+
+18.How to satart and stop a services on linux and check status..?
+    -- systemctl start/stop/status service_name
+ 
+17. How to print all the environment variables details?
+     --printenv
+	 
+     --to set java_home and path tempararly in linux
+	    $ export JAVA_HOME="jdk_location"
+		$ export PATH=$JAVA_HOME/bin:$PATH
+		
+     --to add new env var permanently on linux
+	    Add env variable in ./bashrc file
+		source ~/.bash_profile
+
+18.how to get specific column data from csv on linux..?
+   -- awk -F , {print $n} filename.csv
+           --n is the column number   
+   --awk -F , {print $NF} filename.csv
+           --we get the last column details.
+		   
+19.Display starting 2 characters of all lines
+   -- cut -c1-2 file_name
+
+20.display specific line from the file
+   --sed -n '5p' file_name
+           --above command will return 5th line in the file
+21.How to replace specific word within a file
+   sed 's/word_which_want_to_chnge/replacement_word/g' file_name
+   
+   
+22.convert content to uppercase or lowercase within a file
+   --tr [:lower:] [:upper:] <file_name 
+     tr [:punct:]  z <file_name
+	 tr [:digit:] z <file_name
+     tr % & <file_name
+	    --it replace % by &
+
+23.print word vertically on linux
+   --echo word | fold -w1
+
+24.How to change user or login as different user on linux
+   su <user_name>
+
+25.how to exit as current user or close terminal in linux
+   --exit
+   
+26. If we r not root user , how to execute admin commands like installing applications on linux
+     -- sudo yum install <application_name>
+	 
+
+27. echo word
+      -print the word on linux terminal
+	  
+	  
+   ACCESS REMOTE SERVERS:
+   =====================
+  1.how to check ip address on linux
+    ifconfig
+  2. how to access remote linux server
+    ssh user@hostname
+	     hostname: localhost or any ip address
+	 --after entering it ask for the password then we will login to the server acces	 
+
+3.How to copy a file to remote linux server
+  -- scp file_name user@hostname:destination_path(u01/temp...)
+
+ 
+ 
+ 
+ WORKING WITH PERMISSIONS:
+ =========================
+     1.how to check permission of file..?
+	 --ls -ltr
+	 
+	 USER     GROUP       OTHER
+	 rwx       rw-         r--
+	 
+	 r-read w-write  x-execute
+   
+     2.How to modify permission of a file..?
+	   chmod a+rwx file.txt
+	   chmod u+rwx file.txt
+	   chmod o+r file.txt
+	   chmod g+rw file.txt
+
+	   u-user g-group o-other a-all
+     
+	  3.How to change ownership of the file..?
+	   chown root file_name
+ 
+      4.How to change group ownership of the file
+	    chgrp paul file_name
+ 
+       MEMORY INFO:
+	   ------------
+1.How to check free ram space..?
+   free
+ 
+2.How to check % memory and CPU Utilization?
+    top
+	
+3.How to check disk utilization..?
+  du folder_name
+  
+4.How to check file system available and disk space allocated?
+  df -h264-successfulcrab
+  
+  
+  SYSTEM INFO:
+  ============
+  
+  to check hostname of the linux server
+  hostname
+  
+ 
+ 
+ 
+ PROCESS MANAGEMENT:
+ ==================
+ 
+ 1.How to check if process(ex:java) is running or not?
+ ps -ef
+ ps -ef | grep java
+ 
+ 2.how to get PID of a process?
+   pgrep servicename
+ 
+ 3.how to stop a process by PID
+
+  kill -9 PID_number
+ 
+ 4.kill th eprocess by its name
+   pkill service_name
+ 
+  5. how to check jobs on linux
+    jobs
+	
+  6.resume job in background
+    bg
+	
+	fg-to see jobs in foreground
+	
+  7.How to run a sropt in background
+  nohup ./script &
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Lenovo@DESKTOP-HAGIJ1L ~
+$ pwd
+/home/Lenovo
+
+Lenovo@DESKTOP-HAGIJ1L ~
+$ whoami
+Lenovo
+
+Lenovo@DESKTOP-HAGIJ1L ~
+$ date
+Sun Feb 11 09:02:10 IST 2024
+
+Lenovo@DESKTOP-HAGIJ1L ~
+$ date +%D
+02/11/24
+
+Lenovo@DESKTOP-HAGIJ1L ~
+$ date +%T
+09:03:14
+
+Lenovo@DESKTOP-HAGIJ1L ~
+$ date +%H:%M
+09:03
+
+Lenovo@DESKTOP-HAGIJ1L ~
+$ ls
+unix_demo
+
+Lenovo@DESKTOP-HAGIJ1L ~
+$ ls -lt
+total 0
+drwxr-xr-x 1 Lenovo None 0 Feb 10 18:01 unix_demo
+
+Lenovo@DESKTOP-HAGIJ1L ~
+$ ls -ltr
+total 0
+drwxr-xr-x 1 Lenovo None 0 Feb 10 18:01 unix_demo
+
+Lenovo@DESKTOP-HAGIJ1L ~
+$ cd e:
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ pwd
+/cygdrive/e
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ ls
+'!qhlogs.doc'                               'New folder'
+'$RECYCLE.BIN'                               Seriese
+ 10699226_SQLFILES                          'Sping MVC -20220310T063616Z-001'
+ 14SpringJDBCTemplate-20220311T042247Z-001  'System Volume Information'
+ Azure                                       angular
+ C_TO_E                                      eclipse
+'Combined Community Codec Pack 64bit'        first-spring-boot-project
+ Config.Msi                                 'folder CCCCC'
+ Drivers                                     hibernateusageprocedure.txt
+ EclipseWorkplace                           'java programming language'
+ GITHUBF                                     java-2021-06
+ Hibernet                                    java1.8
+ INtroduction                                java8
+ JDeveloper                                  k20
+ LNTDEVops                                   lntproject
+ LNTJAVA                                     movies
+ LNTSQLDB                                    ngrok-stable-windows-amd64
+ LNTWEB                                      oracle
+ LNT_JENKINS                                 photos
+ LNT_MAVEN                                   practice
+ LNT_NGROK                                   soa_softwares
+ Music
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ ls -lt
+ls: Config.Msi: Permission denied
+ls: 'System Volume Information': Permission denied
+total 276
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Feb  9 10:27  movies
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Feb  9 10:20  Seriese
+d---r-x---+ 1 Unknown+User   Unknown+Group     0 Jan 28 18:01 '$RECYCLE.BIN'
+drwxrwx---+ 1 Administrators Unknown+Group     0 Jul  7  2023  oracle
+drwxr-x---  1 Unknown+User   Unknown+Group     0 Jul  6  2023 'System Volume Information'
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar  2  2023  soa_softwares
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Dec  2  2022  photos
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Sep 30  2022  JDeveloper
+drwxr-x---  1 Unknown+User   Unknown+Group     0 Sep 28  2022  Config.Msi
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Sep 24  2022  java1.8
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Sep 24  2022  java8
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Apr 20  2022  GITHUBF
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar 29  2022  Azure
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar 24  2022  lntproject
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar 17  2022 'folder CCCCC'
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar 15  2022  Hibernet
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar 15  2022  LNTDEVops
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar 11  2022  first-spring-boot-project
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar 11  2022  java-2021-06
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar 11  2022  14SpringJDBCTemplate-20220317Z-001
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar 10  2022  EclipseWorkplace
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar 10  2022 'Sping MVC -20220310T063616Z-
+----rwx---+ 1 Unknown+User   Unknown+Group  3379 Mar  4  2022  hibernateusageprocedure.txt
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar  3  2022  LNT_NGROK
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar  3  2022  ngrok-stable-windows-amd64
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar  3  2022  LNT_MAVEN
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar  3  2022  LNT_JENKINS
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Feb 28  2022  LNTWEB
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Feb 27  2022  C_TO_E
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Feb 27  2022  LNTJAVA
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Feb 20  2022  LNTSQLDB
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Feb 19  2022  INtroduction
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Feb 13  2022  10699226_SQLFILES
+d---r-x---+ 1 Unknown+User   Unknown+Group     0 Jan 26  2022  k20
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Jan 24  2022  practice
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Jan 18  2022 'java programming language'
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Dec 22  2021  eclipse
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Dec 11  2021 'New folder'
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Dec 11  2021  Music
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Dec 11  2021  Drivers
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Dec 11  2021 'Combined Community Codec Pac'
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Dec 11  2021  angular
+----rwx---+ 1 Unknown+User   Unknown+Group 22528 May 12  2021 '!qhlogs.doc'
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ ls -ltr
+ls: Config.Msi: Permission denied
+ls: 'System Volume Information': Permission denied
+total 276
+----rwx---+ 1 Unknown+User   Unknown+Group 22528 May 12  2021 '!qhlogs.doc'
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Dec 11  2021  angular
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Dec 11  2021 'Combined Community Codec Pac'
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Dec 11  2021  Drivers
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Dec 11  2021  Music
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Dec 11  2021 'New folder'
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Dec 22  2021  eclipse
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Jan 18  2022 'java programming language'
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Jan 24  2022  practice
+d---r-x---+ 1 Unknown+User   Unknown+Group     0 Jan 26  2022  k20
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Feb 13  2022  10699226_SQLFILES
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Feb 19  2022  INtroduction
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Feb 20  2022  LNTSQLDB
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Feb 27  2022  LNTJAVA
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Feb 27  2022  C_TO_E
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Feb 28  2022  LNTWEB
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar  3  2022  LNT_JENKINS
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar  3  2022  LNT_MAVEN
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar  3  2022  ngrok-stable-windows-amd64
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar  3  2022  LNT_NGROK
+----rwx---+ 1 Unknown+User   Unknown+Group  3379 Mar  4  2022  hibernateusageprocedure.txt
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar 10  2022 'Sping MVC -20220310T063616Z-
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar 10  2022  EclipseWorkplace
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar 11  2022  14SpringJDBCTemplate-20220317Z-001
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar 11  2022  java-2021-06
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar 11  2022  first-spring-boot-project
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar 15  2022  LNTDEVops
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar 15  2022  Hibernet
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar 17  2022 'folder CCCCC'
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar 24  2022  lntproject
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar 29  2022  Azure
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Apr 20  2022  GITHUBF
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Sep 24  2022  java8
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Sep 24  2022  java1.8
+drwxr-x---  1 Unknown+User   Unknown+Group     0 Sep 28  2022  Config.Msi
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Sep 30  2022  JDeveloper
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Dec  2  2022  photos
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar  2  2023  soa_softwares
+drwxr-x---  1 Unknown+User   Unknown+Group     0 Jul  6  2023 'System Volume Information'
+drwxrwx---+ 1 Administrators Unknown+Group     0 Jul  7  2023  oracle
+d---r-x---+ 1 Unknown+User   Unknown+Group     0 Jan 28 18:01 '$RECYCLE.BIN'
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Feb  9 10:20  Seriese
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Feb  9 10:27  movies
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ ls -lh
+ls: Config.Msi: Permission denied
+ls: 'System Volume Information': Permission denied
+total 276K
+----rwx---+ 1 Unknown+User   Unknown+Group  22K May 12  2021 '!qhlogs.doc'
+d---r-x---+ 1 Unknown+User   Unknown+Group    0 Jan 28 18:01 '$RECYCLE.BIN'
+d---rwx---+ 1 Unknown+User   Unknown+Group    0 Feb 13  2022  10699226_SQLFILES
+d---rwx---+ 1 Unknown+User   Unknown+Group    0 Mar 11  2022  14SpringJDBCTemplate-20220311Z-001
+d---rwx---+ 1 Unknown+User   Unknown+Group    0 Mar 29  2022  Azure
+d---rwx---+ 1 Unknown+User   Unknown+Group    0 Feb 27  2022  C_TO_E
+d---rwx---+ 1 Unknown+User   Unknown+Group    0 Dec 11  2021 'Combined Community Codec Pack
+drwxr-x---  1 Unknown+User   Unknown+Group    0 Sep 28  2022  Config.Msi
+d---rwx---+ 1 Unknown+User   Unknown+Group    0 Dec 11  2021  Drivers
+d---rwx---+ 1 Unknown+User   Unknown+Group    0 Mar 10  2022  EclipseWorkplace
+d---rwx---+ 1 Unknown+User   Unknown+Group    0 Apr 20  2022  GITHUBF
+d---rwx---+ 1 Unknown+User   Unknown+Group    0 Mar 15  2022  Hibernet
+d---rwx---+ 1 Unknown+User   Unknown+Group    0 Feb 19  2022  INtroduction
+d---rwx---+ 1 Unknown+User   Unknown+Group    0 Sep 30  2022  JDeveloper
+d---rwx---+ 1 Unknown+User   Unknown+Group    0 Mar 15  2022  LNTDEVops
+d---rwx---+ 1 Unknown+User   Unknown+Group    0 Feb 27  2022  LNTJAVA
+d---rwx---+ 1 Unknown+User   Unknown+Group    0 Feb 20  2022  LNTSQLDB
+d---rwx---+ 1 Unknown+User   Unknown+Group    0 Feb 28  2022  LNTWEB
+d---rwx---+ 1 Unknown+User   Unknown+Group    0 Mar  3  2022  LNT_JENKINS
+d---rwx---+ 1 Unknown+User   Unknown+Group    0 Mar  3  2022  LNT_MAVEN
+d---rwx---+ 1 Unknown+User   Unknown+Group    0 Mar  3  2022  LNT_NGROK
+d---rwx---+ 1 Unknown+User   Unknown+Group    0 Dec 11  2021  Music
+d---rwx---+ 1 Unknown+User   Unknown+Group    0 Dec 11  2021 'New folder'
+d---rwx---+ 1 Unknown+User   Unknown+Group    0 Feb  9 10:20  Seriese
+d---rwx---+ 1 Unknown+User   Unknown+Group    0 Mar 10  2022 'Sping MVC -20220310T063616Z-0
+drwxr-x---  1 Unknown+User   Unknown+Group    0 Jul  6  2023 'System Volume Information'
+d---rwx---+ 1 Unknown+User   Unknown+Group    0 Dec 11  2021  angular
+d---rwx---+ 1 Unknown+User   Unknown+Group    0 Dec 22  2021  eclipse
+d---rwx---+ 1 Unknown+User   Unknown+Group    0 Mar 11  2022  first-spring-boot-project
+d---rwx---+ 1 Unknown+User   Unknown+Group    0 Mar 17  2022 'folder CCCCC'
+----rwx---+ 1 Unknown+User   Unknown+Group 3.3K Mar  4  2022  hibernateusageprocedure.txt
+d---rwx---+ 1 Unknown+User   Unknown+Group    0 Jan 18  2022 'java programming language'
+d---rwx---+ 1 Unknown+User   Unknown+Group    0 Mar 11  2022  java-2021-06
+d---rwx---+ 1 Unknown+User   Unknown+Group    0 Sep 24  2022  java1.8
+d---rwx---+ 1 Unknown+User   Unknown+Group    0 Sep 24  2022  java8
+d---r-x---+ 1 Unknown+User   Unknown+Group    0 Jan 26  2022  k20
+d---rwx---+ 1 Unknown+User   Unknown+Group    0 Mar 24  2022  lntproject
+d---rwx---+ 1 Unknown+User   Unknown+Group    0 Feb  9 10:27  movies
+d---rwx---+ 1 Unknown+User   Unknown+Group    0 Mar  3  2022  ngrok-stable-windows-amd64
+drwxrwx---+ 1 Administrators Unknown+Group    0 Jul  7  2023  oracle
+d---rwx---+ 1 Unknown+User   Unknown+Group    0 Dec  2  2022  photos
+d---rwx---+ 1 Unknown+User   Unknown+Group    0 Jan 24  2022  practice
+d---rwx---+ 1 Unknown+User   Unknown+Group    0 Mar  2  2023  soa_softwares
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ cat ^C
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ cat
+
+
+
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ cat hibernateusageprocedure.txt
+after creating maven project--->open pom.xml write the below code inside the xml project
+========================
+<dependencies>
+                <dependency>
+                    <groupId>javax.persistence</groupId>
+                    <artifactId>javax.persistence-api</artifactId>
+                    <version>2.2</version>
+                </dependency>
+
+                <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-core</artifactId>
+                <version>5.4.30.Final</version>
+            </dependency>
+
+                <dependency>
+                        <groupId>com.oracle.ojdbc</groupId>
+                <artifactId>ojdbc8</artifactId>
+                <version>19.3.0.0</version>
+        </dependency>
+    </dependencies>
+==================================
+
+after that save the xml file----> xml dependency will download automatically
+======================
+-create META-INF folder in main/java
+right click on META-INF --new --other--search for xml file-make xml file with .xml extensio
+===============================
+ <?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+             http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+    version="2.0" >
+    <persistence-unit name="customerPU">
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+        <properties>
+          <property name="hibernate.connection.url" value="jdbc:oracle:thin:@localhost:orcl
+
+            <property name="hibernate.connection.username" value="" />
+            <property name="hibernate.connection.password" value="" />
+            <property name="hibernate.dialect" value="org.hibernate.dialect.OracleDialect"/
+            <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.format_sql" value="true" />
+            <property name="hibernate.hbm2ddl.auto" value="create" />
+        </properties>
+    </persistence-unit>
+</persistence>
+===============================================
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+             http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+    version="2.0" >
+    <persistence-unit name="customerPU">
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+        <properties>
+          <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/mysq
+           <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"
+            <property name="hibernate.connection.username" value="root" />
+            <property name="hibernate.connection.password" value="root" />
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/eate.show_sql" value="true" />
+$           <property name="hibernate.format_sql" value="true" />
+            <property name="hibernate.hbm2ddl.auto" value="update" />
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$   </persistence-unit>
+</persistence>
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e================
+$ c/main/java--com.lnt package---CustomerDao.java
+src/main/java--com.lnt.entity package---Customer.java
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ ls
+'!qhlogs.doc'                               'New folder'
+'$RECYCLE.BIN'                               PACKAGES.txt
+ 10699226_SQLFILES                           Seriese
+ 14SpringJDBCTemplate-20220311T042247Z-001  'Sping MVC -20220310T063616Z-001'
+ Azure                                      'System Volume Information'
+ C_TO_E                                      angular
+'Combined Community Codec Pack 64bit'        eclipse
+ Config.Msi                                  first-spring-boot-project
+ Drivers                                    'folder CCCCC'
+ EclipseWorkplace                            hibernateusageprocedure.txt
+ GITHUBF                                    'java programming language'
+ Hibernet                                    java-2021-06
+ INtroduction                                java1.8
+ JDeveloper                                  java8
+ LNTDEVops                                   k20
+ LNTJAVA                                     lntproject
+ LNTSQLDB                                    movies
+ LNTWEB                                      ngrok-stable-windows-amd64
+ LNT_JENKINS                                 oracle
+ LNT_MAVEN                                   photos
+ LNT_NGROK                                   practice
+ Music                                       soa_softwares
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ more packages.txt
+creating and using packages:
+
+packages are the container which can have procedures,functions,variables,types,collections,
+tions and ...
+
+
+Advantages of packages:
+    -Modularity  (we can use and share different objects in the packages like subprograms )
+    -Easy Maintenance
+    -Encapsulation and security(other users cant access the info ,
+        if u specified it in the pacakage body, but for the all users we can specify the da
+ the package spec)
+        -Functionality
+        -Performance
+        -OverLoading(in packages overloding is easy and faster)
+
+
+main two reasons of using packages:
+         1.Logically grouping of objects (it reduces the code complexity and crowded code);
+                 2.Performance
+
+
+
+
+        package object visibility:
+        1.local variables  (only accessible to its own object, declared in the subprograms)
+        2.public variables  (accessible to all who as privilage to access,declared in the p
+e spec)
+        3.private variables  (accessible for all objects within the package body, its decla
+n the package body)
+
+        PERSISTENT state of packages:
+        ---------------------------
+  PGA(Program/private global area):>(its stores the objects,variables, no other users can s
+ touch/reach these objects, every user has there own PGA'S)
+
+
+                                                                                        Sto
+obj,var,codes,packages)
+
+
+  SGA(System/shared global area):>>its stored shared objects,valuses,codes,packages for all
+r users
+
+
+note : pga and sga refer to same memory with diff name
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ more packages.txt
+creating and using packages:
+
+packages are the container which can have procedures,functions,variables,types,collections,
+tions and ...
+
+
+Advantages of packages:
+    -Modularity  (we can use and share different objects in the packages like subprograms )
+    -Easy Maintenance
+    -Encapsulation and security(other users cant access the info ,
+        if u specified it in the pacakage body, but for the all users we can specify the da
+ the package spec)
+        -Functionality
+        -Performance
+        -OverLoading(in packages overloding is easy and faster)
+
+
+main two reasons of using packages:
+         1.Logically grouping of objects (it reduces the code complexity and crowded code);
+                 2.Performance
+
+
+
+
+        package object visibility:
+        1.local variables  (only accessible to its own object, declared in the subprograms)
+        2.public variables  (accessible to all who as privilage to access,declared in the p
+e spec)
+        3.private variables  (accessible for all objects within the package body, its decla
+n the package body)
+
+        PERSISTENT state of packages:
+        ---------------------------
+  PGA(Program/private global area):>(its stores the objects,variables, no other users can s
+ touch/reach these objects, every user has there own PGA'S)
+
+
+                                                                                        Sto
+obj,var,codes,packages)
+
+
+  SGA(System/shared global area):>>its stored shared objects,valuses,codes,packages for all
+r users
+
+
+note : pga and sga refer to same memory with diff name
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ more hibernateusageprocedure.txt
+after creating maven project--->open pom.xml write the below code insi
+de the xml project
+========================
+<dependencies>
+                <dependency>
+                    <groupId>javax.persistence</groupId>
+                    <artifactId>javax.persistence-api</artifactId>
+                    <version>2.2</version>
+                </dependency>
+
+                <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-core</artifactId>
+                <version>5.4.30.Final</version>
+            </dependency>
+
+                <dependency>
+                        <groupId>com.oracle.ojdbc</groupId>
+                <artifactId>ojdbc8</artifactId>
+                <version>19.3.0.0</version>
+        </dependency>
+    </dependencies>
+==================================
+
+after that save the xml file----> xml dependency will download automat
+ically
+======================
+-create META-INF folder in main/java
+right click on META-INF --new --other--search for xml file-make xml fi
+le with .xml extension
+===============================
+ <?xml version="1.0" encoding="UTF-8"?>
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ touch new_FILE
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ ls
+'!qhlogs.doc'                                LNTJAVA                           'folder CCCC
+'$RECYCLE.BIN'                               LNTSQLDB                           hibernateus
+ 10699226_SQLFILES                           LNTWEB                            'java progra
+ 14SpringJDBCTemplate-20220311T042247Z-001   LNT_JENKINS                        java-2021-0
+ Azure                                       LNT_MAVEN                          java1.8
+ C_TO_E                                      LNT_NGROK                          java8
+'Combined Community Codec Pack 64bit'        Music                              k20
+ Config.Msi                                 'New folder'                        lntproject
+ Drivers                                     PACKAGES.txt                       movies
+ EclipseWorkplace                            Seriese                            new_FILE
+ GITHUBF                                    'Sping MVC -20220310T063616Z-001'   ngrok-stabl
+ Hibernet                                   'System Volume Information'         oracle
+ INtroduction                                angular                            photos
+ JDeveloper                                  eclipse                            practice
+ LNTDEVops                                   first-spring-boot-project          soa_softwar
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ rm new_FILE
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ ls
+'!qhlogs.doc'                                LNTJAVA                           'folder CCCC
+'$RECYCLE.BIN'                               LNTSQLDB                           hibernateus
+ 10699226_SQLFILES                           LNTWEB                            'java progra
+ 14SpringJDBCTemplate-20220311T042247Z-001   LNT_JENKINS                        java-2021-0
+ Azure                                       LNT_MAVEN                          java1.8
+ C_TO_E                                      LNT_NGROK                          java8
+'Combined Community Codec Pack 64bit'        Music                              k20
+ Config.Msi                                 'New folder'                        lntproject
+ Drivers                                     PACKAGES.txt                       movies
+ EclipseWorkplace                            Seriese                            ngrok-stabl
+ GITHUBF                                    'Sping MVC -20220310T063616Z-001'   oracle
+ Hibernet                                   'System Volume Information'         photos
+ INtroduction                                angular                            practice
+ JDeveloper                                  eclipse                            soa_softwar
+ LNTDEVops                                   first-spring-boot-project
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ vi NEW_FILE
+E1187: Failed to source defaults.vim
+Press ENTER or type command to continue
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ ls
+'!qhlogs.doc'                                LNTJAVA                            first-sprin
+'$RECYCLE.BIN'                               LNTSQLDB                          'folder CCCC
+ 10699226_SQLFILES                           LNTWEB                             hibernateus
+ 14SpringJDBCTemplate-20220311T042247Z-001   LNT_JENKINS                       'java progra
+ Azure                                       LNT_MAVEN                          java-2021-0
+ C_TO_E                                      LNT_NGROK                          java1.8
+'Combined Community Codec Pack 64bit'        Music                              java8
+ Config.Msi                                  NEW_FILE                           k20
+ Drivers                                    'New folder'                        lntproject
+ EclipseWorkplace                            PACKAGES.txt                       movies
+ GITHUBF                                     Seriese                            ngrok-stabl
+ Hibernet                                   'Sping MVC -20220310T063616Z-001'   oracle
+ INtroduction                               'System Volume Information'         photos
+ JDeveloper                                  angular                            practice
+ LNTDEVops                                   eclipse                            soa_softwar
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ cat NEW_FILE
+Clalalalkjjbx
+xbhbxxs
+kallappa tippanagoudra
+from chikkagunjal
+dharwad
+karnataka
+C
+581117
+B
+gkydA
+
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ vi packages.txt
+E1187: Failed to source defaults.vim
+Press ENTER or type command to continue
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ vi packages.txt
+E1187: Failed to source defaults.vim
+Press ENTER or type command to continue
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ nano NEW_FILE
+-bash: nano: command not found
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ nano NEW_FILE
+-bash: nano: command not found
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ mkdir NEW_FOLDER123
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ mkdir NEW_FOLDER123/folder_in_folder/last_folder
+mkdir: cannot create directory ‘NEW_FOLDER123/folder_in_folder/last_folder’: No such file or directory
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ mkdir NEW_FOLDER1234/folder_in_folder/last_folder
+mkdir: cannot create directory ‘NEW_FOLDER1234/folder_in_folder/last_folder’: No such file or directory
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ mkdir NEW_FOLDER123/folder_in
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ ls
+'!qhlogs.doc'                                NEW_FOLDER123
+'$RECYCLE.BIN'                              'New folder'
+ 10699226_SQLFILES                           PACKAGES.txt
+ 14SpringJDBCTemplate-20220311T042247Z-001   Seriese
+ Azure                                      'Sping MVC -20220310T063616Z-001'
+ C_TO_E                                     'System Volume Information'
+'Combined Community Codec Pack 64bit'        angular
+ Config.Msi                                  eclipse
+ Drivers                                     first-spring-boot-project
+ EclipseWorkplace                           'folder CCCCC'
+ GITHUBF                                     hibernateusageprocedure.txt
+ Hibernet                                   'java programming language'
+ INtroduction                                java-2021-06
+ JDeveloper                                  java1.8
+ LNTDEVops                                   java8
+ LNTJAVA                                     k20
+ LNTSQLDB                                    lntproject
+ LNTWEB                                      movies
+ LNT_JENKINS                                 ngrok-stable-windows-amd64
+ LNT_MAVEN                                   oracle
+ LNT_NGROK                                   photos
+ Music                                       practice
+ NEW_FILE                                    soa_softwares
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ cd NEW_FOLDER123
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/NEW_FOLDER123
+$ ls
+folder_in
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/NEW_FOLDER123
+$ rmdir folder_in
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/NEW_FOLDER123
+$ ls
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/NEW_FOLDER123
+$ rm -rf NEW_FOLDER123
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/NEW_FOLDER123
+$ /
+-bash: /: Is a directory
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/NEW_FOLDER123
+$ \
+> :/
+-bash: :/: No such file or directory
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/NEW_FOLDER123
+$ :\
+>
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/NEW_FOLDER123
+$ e:
+-bash: e:: command not found
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/NEW_FOLDER123
+$ cd \
+>
+
+Lenovo@DESKTOP-HAGIJ1L ~
+$ cd /
+
+Lenovo@DESKTOP-HAGIJ1L /
+$
+
+Lenovo@DESKTOP-HAGIJ1L /
+$ pwd
+/
+
+Lenovo@DESKTOP-HAGIJ1L /
+$ cd :
+-bash: cd: :: No such file or directory
+
+Lenovo@DESKTOP-HAGIJ1L /
+$ cd e:
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ cd \
+>
+
+Lenovo@DESKTOP-HAGIJ1L ~
+$ cd \
+>
+
+Lenovo@DESKTOP-HAGIJ1L ~
+$ cd /
+
+Lenovo@DESKTOP-HAGIJ1L /
+$ cd e:
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ cd /
+
+Lenovo@DESKTOP-HAGIJ1L /
+$ pwd
+/
+
+Lenovo@DESKTOP-HAGIJ1L /
+$ cd e:
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ ls
+'!qhlogs.doc'                                NEW_FOLDER123
+'$RECYCLE.BIN'                              'New folder'
+ 10699226_SQLFILES                           PACKAGES.txt
+ 14SpringJDBCTemplate-20220311T042247Z-001   Seriese
+ Azure                                      'Sping MVC -20220310T063616Z-001'
+ C_TO_E                                     'System Volume Information'
+'Combined Community Codec Pack 64bit'        angular
+ Config.Msi                                  eclipse
+ Drivers                                     first-spring-boot-project
+ EclipseWorkplace                           'folder CCCCC'
+ GITHUBF                                     hibernateusageprocedure.txt
+ Hibernet                                   'java programming language'
+ INtroduction                                java-2021-06
+ JDeveloper                                  java1.8
+ LNTDEVops                                   java8
+ LNTJAVA                                     k20
+ LNTSQLDB                                    lntproject
+ LNTWEB                                      movies
+ LNT_JENKINS                                 ngrok-stable-windows-amd64
+ LNT_MAVEN                                   oracle
+ LNT_NGROK                                   photos
+ Music                                       practice
+ NEW_FILE                                    soa_softwares
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ cd ^C
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ cd NEW_FOLDER123
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/NEW_FOLDER123
+$ cd\
+>
+
+Lenovo@DESKTOP-HAGIJ1L ~
+$ cd e:
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ cd NEW_FOLDER123
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/NEW_FOLDER123
+$ cd /
+
+Lenovo@DESKTOP-HAGIJ1L /
+$ cd e:
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ cd NEW_FOLDER123
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/NEW_FOLDER123
+$ e:
+-bash: e:: command not found
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/NEW_FOLDER123
+$ cd/
+-bash: cd/: No such file or directory
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/NEW_FOLDER123
+$ cd\
+>
+
+Lenovo@DESKTOP-HAGIJ1L ~
+$ cd :
+-bash: cd: :: No such file or directory
+
+Lenovo@DESKTOP-HAGIJ1L ~
+$ cd e:
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ cd/
+-bash: cd/: No such file or directory
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ rm -rf NEW_FOLDER123
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ ls
+'!qhlogs.doc'                               'New folder'
+'$RECYCLE.BIN'                               PACKAGES.txt
+ 10699226_SQLFILES                           Seriese
+ 14SpringJDBCTemplate-20220311T042247Z-001  'Sping MVC -20220310T063616Z-001'
+ Azure                                      'System Volume Information'
+ C_TO_E                                      angular
+'Combined Community Codec Pack 64bit'        eclipse
+ Config.Msi                                  first-spring-boot-project
+ Drivers                                    'folder CCCCC'
+ EclipseWorkplace                            hibernateusageprocedure.txt
+ GITHUBF                                    'java programming language'
+ Hibernet                                    java-2021-06
+ INtroduction                                java1.8
+ JDeveloper                                  java8
+ LNTDEVops                                   k20
+ LNTJAVA                                     lntproject
+ LNTSQLDB                                    movies
+ LNTWEB                                      ngrok-stable-windows-amd64
+ LNT_JENKINS                                 oracle
+ LNT_MAVEN                                   photos
+ LNT_NGROK                                   practice
+ Music                                       soa_softwares
+ NEW_FILE
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ cd seriese
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/seriese
+$ ls
+'2021 Complete Python Bootcamp From Zero to Hero in Python'
+ ALL_OF_US_DEAD
+'All the Light We Cannot See (2023) Season 1 S01 (1080p NF WEB-DL x265 HEVC 10bit EAC3 Atmos 5.1 Garshasp)'
+'Bridgerton.S02.COMPLETE.720p.NF.WEBRip.x264-GalaxyTV[TGx]'
+'Full Stack Data Analyst A-Z BootCamp'
+ GOT
+'Linux Command Line'
+'Linux Command Line Course Linux Terminal Shell Scripting'
+'ORACLE PLSQL'
+'ORACLE SQL'
+'Oracle DBA 11g12c'
+'Oracle DBA 21c'
+'Oracle SQL Performance Tuning Masterclass 2020'
+'Outlander Season 2 Complete 720p BluRay x264 [i_c]'
+ Outlander-S01-Season.1--2014-2015
+'Outlast.S01.COMPLETE.720p.NF.WEBRip.x264-GalaxyTV[TGx]'
+ PYTHON_BY_ANGELA
+ Stranger.Things.S02.Season.02.COMPLETE.XviD-AFG
+ Stranger.Things.S03.WEBRip.x264-ION10
+ Stranger.Things.S04.1080p.WEBRip.x265-RARBG
+ Stranger.Things.Season.1.S01.1080p.WEBRip.6CH.HEVC.x265-GIRAYS
+'The Last Kingdom Season 1 Complete 720p WEB-DL x264 [i_c]'
+'The Rain S01 S02 S03 Complete WebRip 720p English AAC 5.1 x264 ESub - mkvCinemas [Telly]'
+ The.Fall.Of.The.House.Of.Usher.S01.COMPLETE.1080p.ENG.And.HINDI.Multi.Sub.DDP5.1.Atmos.DV.HDR.x265.MP4-BEN.THE.MEN
+'The.Kings.Affection.S01.KOREAN.WEBRip.x264-ION10[eztv.re]'
+'The.Last.of.Us.S01.COMPLETE.720p.HMAX.WEBRip.x264-GalaxyTV[TGx]'
+'Vikings Season 2 Complete 720p Web Dl.x264 Sujaidr'
+'berlin.2023.s01e01.1080p.web.h264-successfulcrab[EZTVx.to].mkv'
+'berlin.2023.s01e02.1080p.web.h264-successfulcrab[EZTVx.to].mkv'
+'berlin.2023.s01e03.1080p.web.h264-successfulcrab[EZTVx.to].mkv'
+'berlin.2023.s01e04.1080p.web.h264-successfulcrab[EZTVx.to].mkv'
+'berlin.2023.s01e05.1080p.web.h264-successfulcrab[EZTVx.to].mkv'
+'berlin.2023.s01e06.1080p.web.h264-successfulcrab[EZTVx.to].mkv'
+'berlin.2023.s01e07.1080p.web.h264-successfulcrab[EZTVx.to].mkv'
+'berlin.2023.s01e08.1080p.web.h264-successfulcrab[EZTVx.to].mkv'
+'lost in space'
+'redmi 3s'
+'silent sea'
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/seriese
+$ cd redmi 3s
+-bash: cd: too many arguments
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/seriese
+$ cd 'redmi 3s'
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/seriese/redmi 3s
+$ ls
+ Alarms       Download       Kkkk      'Quick Heal'               Videoder
+ B            Epass          Musick     SHAREit                  'WhatsApp Documents'
+ CamScanner   FileExplorer   Now2       Telegram                 'WhatsApp Images'
+ DCIM         GBWhatsApp     Pictures  'This PC - Shortcut.lnk'   bluetooth
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/seriese/redmi 3s
+$ cd Musick
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/seriese/redmi 3s/Musick
+$ ls
+ AlbumArtSmall.jpg
+ Ammammammo.mp3
+'Andada Bombege.mp3'
+'Anjaniputhraa_-_Chanda_Chanda_(Video_Song)___Puneeth_Rajkumar,_Rashmika_Mand.mp3'
+ Bajarangi__Sri_Krishna__Official_HD_Video_-_Feat_Shivraj_Kumar,_Aindrita_Ray.mp3
+ Chowka___Appa_i_Love_You_Pa___New_Video_Song_2017___Anuradha_Bhat___Arjun_Ja.mp3
+'Chuttu_Chuttu_(320Kbps).mp3'
+'Devaru Bareda.mp3'
+ Folder.jpg
+'Game of Thrones _ Theme Song _ Flute Cover by Swarnim Maharjan Ft. Devid Maharjan ( 160kbps ).mp3'
+'Gediya Beku.mp3'
+'Jai_Bajarangi_(1).mp3'
+'Kadalo Kadalo.mp3'
+'Kambada Myalina.mp3'
+'Mode Modalu.mp3'
+'Mosagaatiye Official Full Video Song _ Arfaz Ullala _ Nithin Shankaraghatta ( 160kbps ).mp3'
+'Neenu Irade.mp3'
+'Official Opening Credits_ Game of Thrones (HBO) ( 160kbps ).mp3'
+'Please Love Me.mp3'
+'Ra_Ra_(Telugu).mp3'
+'Saaluthillave [Kotigobba 2].mp3'
+ Sariyaagi.mp3
+'Sevanthiye Sevanthiye 1.mp3'
+'Sevanthiye Sevanthiye.mp3'
+'Tujh-Mein-Rab-Dikhta-Hai-(Female-Version)-Shreya-Ghoshal.mp3'
+'Yaralli[MobiKannada.Net].mp3'
+'Yele Hombisile - Halunda Thavaru - Vishnuvardhan Hit Songs ( 160kbps ).mp3'
+'Yenammi_Yenammi_(320Kbps).mp3'
+'Yeno_Yeno_Agide_-_(IndianWap.Mobi).mp3'
+'[iSongs.info] 05 - Kushalave Kshemave.mp3'
+'[iSongs.info] 06 - Priya Please Love Me.mp3'
+ usire_usire_by_sonu_nigam_mp3_23727.mp3
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/seriese/redmi 3s/Musick
+$ cd ..
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/seriese/redmi 3s
+$ cd ../..
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ cd /
+
+Lenovo@DESKTOP-HAGIJ1L /
+$ ls
+Cygwin-Terminal.ico  Cygwin.ico  cygdrive  etc   lib   sbin  usr
+Cygwin.bat           bin         dev       home  proc  tmp   var
+
+Lenovo@DESKTOP-HAGIJ1L /
+$ cd home
+
+Lenovo@DESKTOP-HAGIJ1L /home
+$ ls
+Lenovo
+
+Lenovo@DESKTOP-HAGIJ1L /home
+$ cd lenovo
+
+Lenovo@DESKTOP-HAGIJ1L /home/lenovo
+$ ls
+unix_demo
+
+Lenovo@DESKTOP-HAGIJ1L /home/lenovo
+$ cd e:
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ ls
+'!qhlogs.doc'                               'New folder'
+'$RECYCLE.BIN'                               PACKAGES.txt
+ 10699226_SQLFILES                           Seriese
+ 14SpringJDBCTemplate-20220311T042247Z-001  'Sping MVC -20220310T063616Z-001'
+ Azure                                      'System Volume Information'
+ C_TO_E                                      angular
+'Combined Community Codec Pack 64bit'        eclipse
+ Config.Msi                                  first-spring-boot-project
+ Drivers                                    'folder CCCCC'
+ EclipseWorkplace                            hibernateusageprocedure.txt
+ GITHUBF                                    'java programming language'
+ Hibernet                                    java-2021-06
+ INtroduction                                java1.8
+ JDeveloper                                  java8
+ LNTDEVops                                   k20
+ LNTJAVA                                     lntproject
+ LNTSQLDB                                    movies
+ LNTWEB                                      ngrok-stable-windows-amd64
+ LNT_JENKINS                                 oracle
+ LNT_MAVEN                                   photos
+ LNT_NGROK                                   practice
+ Music                                       soa_softwares
+ NEW_FILE
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ cd new_file
+-bash: cd: new_file: Not a directory
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ cd 'new folder'
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ touch new_file
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ cp packages.txt /'new folder'
+cp: cannot stat 'packages.txt': No such file or directory
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ cd ..
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ cp packages.txt /'new folder'
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ cd 'new folder'
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ ls
+'Learn Python Programming Masterclass'   new_file
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ cp packages.txt 'new folder'
+cp: cannot stat 'packages.txt': No such file or directory
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ cd ..
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ cp packages.txt 'new folder'
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ cd 'new folder'
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ ls
+'Learn Python Programming Masterclass'   new_file   packages.txt
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ cd ..
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ ls
+'!qhlogs.doc'                               'New folder'
+'$RECYCLE.BIN'                               PACKAGES.txt
+ 10699226_SQLFILES                           Seriese
+ 14SpringJDBCTemplate-20220311T042247Z-001  'Sping MVC -20220310T063616Z-001'
+ Azure                                      'System Volume Information'
+ C_TO_E                                      angular
+'Combined Community Codec Pack 64bit'        eclipse
+ Config.Msi                                  first-spring-boot-project
+ Drivers                                    'folder CCCCC'
+ EclipseWorkplace                            hibernateusageprocedure.txt
+ GITHUBF                                    'java programming language'
+ Hibernet                                    java-2021-06
+ INtroduction                                java1.8
+ JDeveloper                                  java8
+ LNTDEVops                                   k20
+ LNTJAVA                                     lntproject
+ LNTSQLDB                                    movies
+ LNTWEB                                      ngrok-stable-windows-amd64
+ LNT_JENKINS                                 oracle
+ LNT_MAVEN                                   photos
+ LNT_NGROK                                   practice
+ Music                                       soa_softwares
+ NEW_FILE
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ cd 'new folder'
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ cp ../C_T_E .
+cp: cannot stat '../C_T_E': No such file or directory
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ cp ../'!qhlogs.doc' .
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ ls
+'!qhlogs.doc'  'Learn Python Programming Masterclass'   new_file   packages.txt
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ cp packages.txt packages_copy.txt
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ ls
+'!qhlogs.doc'                            new_file       packages_copy.txt
+'Learn Python Programming Masterclass'   packages.txt
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ mv package_copy  /cygdrive/e/
+mv: cannot stat 'package_copy': No such file or directory
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ mv package_copy.txt  /cygdrive/e/
+mv: cannot stat 'package_copy.txt': No such file or directory
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ mv packages_copy  /cygdrive/e/
+mv: cannot stat 'packages_copy': No such file or directory
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ mv packages_copy.txt  /cygdrive/e/
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ ls
+'!qhlogs.doc'  'Learn Python Programming Masterclass'   new_file   packages.txt
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ cd ..
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ ls
+'!qhlogs.doc'                               'New folder'
+'$RECYCLE.BIN'                               PACKAGES.txt
+ 10699226_SQLFILES                           Seriese
+ 14SpringJDBCTemplate-20220311T042247Z-001  'Sping MVC -20220310T063616Z-001'
+ Azure                                      'System Volume Information'
+ C_TO_E                                      angular
+'Combined Community Codec Pack 64bit'        eclipse
+ Config.Msi                                  first-spring-boot-project
+ Drivers                                    'folder CCCCC'
+ EclipseWorkplace                            hibernateusageprocedure.txt
+ GITHUBF                                    'java programming language'
+ Hibernet                                    java-2021-06
+ INtroduction                                java1.8
+ JDeveloper                                  java8
+ LNTDEVops                                   k20
+ LNTJAVA                                     lntproject
+ LNTSQLDB                                    movies
+ LNTWEB                                      ngrok-stable-windows-amd64
+ LNT_JENKINS                                 oracle
+ LNT_MAVEN                                   packages_copy.txt
+ LNT_NGROK                                   photos
+ Music                                       practice
+ NEW_FILE                                    soa_softwares
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ mv packages_copy.txt  packages_copy_updated_name.txt
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ ls
+'!qhlogs.doc'                               'New folder'
+'$RECYCLE.BIN'                               PACKAGES.txt
+ 10699226_SQLFILES                           Seriese
+ 14SpringJDBCTemplate-20220311T042247Z-001  'Sping MVC -20220310T063616Z-001'
+ Azure                                      'System Volume Information'
+ C_TO_E                                      angular
+'Combined Community Codec Pack 64bit'        eclipse
+ Config.Msi                                  first-spring-boot-project
+ Drivers                                    'folder CCCCC'
+ EclipseWorkplace                            hibernateusageprocedure.txt
+ GITHUBF                                    'java programming language'
+ Hibernet                                    java-2021-06
+ INtroduction                                java1.8
+ JDeveloper                                  java8
+ LNTDEVops                                   k20
+ LNTJAVA                                     lntproject
+ LNTSQLDB                                    movies
+ LNTWEB                                      ngrok-stable-windows-amd64
+ LNT_JENKINS                                 oracle
+ LNT_MAVEN                                   packages_copy_updated_name.txt
+ LNT_NGROK                                   photos
+ Music                                       practice
+ NEW_FILE                                    soa_softwares
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ cd 'new folder'
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ ls
+'!qhlogs.doc'  'Learn Python Programming Masterclass'   new_file   packages.txt
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ head -3 packages.txt
+lkjC
+creating and using packages:
+
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ head -10 packages.txt
+lkjC
+creating and using packages:
+
+packages are the container which can have procedures,functions,variables,types,collections,exceptions and ...
+
+
+Advantages of packages:
+    -Modularity  (we can use and share different objects in the packages like subprograms )
+    -Easy Maintenance
+    -Encapsulation and security(other users cant access the info ,
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ tail -10 packages.txt
+
+https://github.com/porpup/PL-SQL_CURSOR_LOOPs
+
+https://github.com/porpup/PL-SQL_Parameter_Mode
+
+https://github.com/porpup/PL-SQL_SELECT_INTO
+
+https://github.com/porpup/PL-SQL_IF_condition
+
+https://github.com/naveen8853/Ex-No-5-Creating-Triggers-using-PL-SQL
+
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ touch file_sort
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ vi file_sort
+E1187: Failed to source defaults.vim
+Press ENTER or type command to continue
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ cat file_sort
+A
+F
+B
+K
+O
+I
+C
+L
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ sort file_sort
+A
+B
+C
+F
+I
+K
+L
+O
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ sort -r file_sort
+O
+L
+K
+I
+F
+C
+B
+A
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ vi file_sort
+E1187: Failed to source defaults.vim
+Press ENTER or type command to continue
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ cat file_sort
+A
+J
+H
+I
+O
+A
+F
+B
+K
+O
+I
+C
+L
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ sort file_sort | uniq
+A
+B
+C
+F
+H
+I
+J
+K
+L
+O
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ split -l 5 file_sort
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ ls
+'!qhlogs.doc'                            file_sort   packages.txt   xab
+'Learn Python Programming Masterclass'   new_file    xaa            xac
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ cat xac
+I
+C
+L
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ cat xaa
+A
+J
+H
+I
+O
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ less packages.txt
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ grep "objects" packages.txt
+    -Modularity  (we can use and share different objects in the packages like s
+         1.Logically grouping of objects (it reduces the code complexity and cr
+        3.private variables  (accessible for all objects within the package bodred in the package body)
+  PGA(Program/private global area):>(its stores the objects,variables, no otheree or touch/reach these objects, every user has there own PGA'S)
+  SGA(System/shared global area):>>its stored shared objects,valuses,codes,pack other users
+        important info for DBA and develper is toc check status of the objects
+        *select * from user_objects;
+        *select * from user_objects where object_type='PACKAGE BODY' and objectPKG';
+        select * from user_objects where status ='invalid';
+select * from user_objects;
+select * from user_objects where object_type='PACKAGE BODY' and object_name ='E
+select * from user_objects where status ='invalid';
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ grep "objects"|"accessible" packages.txt
+-bash: accessible: command not found
+
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ grep "objects|accessible" packages.txt
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ egrep "objects|accessible" packages.txt
+    -Modularity  (we can use and share different objects in the packages like s
+         1.Logically grouping of objects (it reduces the code complexity and cr
+        1.local variables  (only accessible to its own object, declared in the
+        2.public variables  (accessible to all who as privilage to access,declaackage spec)
+        3.private variables  (accessible for all objects within the package bodred in the package body)
+  PGA(Program/private global area):>(its stores the objects,variables, no otheree or touch/reach these objects, every user has there own PGA'S)
+  SGA(System/shared global area):>>its stored shared objects,valuses,codes,pack other users
+        important info for DBA and develper is toc check status of the objects
+        *select * from user_objects;
+        *select * from user_objects where object_type='PACKAGE BODY' and objectPKG';
+        select * from user_objects where status ='invalid';
+select * from user_objects;
+select * from user_objects where object_type='PACKAGE BODY' and object_name ='E
+select * from user_objects where status ='invalid';
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ ls
+'!qhlogs.doc'                            file_sort   packages.txt   xab
+'Learn Python Programming Masterclass'   new_file    xaa            xac
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ ls xa*
+xaa  xab  xac
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ ls *.txt
+packages.txt
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ ls *.csv
+ls: cannot access '*.csv': No such file or directory
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ touch file_name{1..10}
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ ls
+'!qhlogs.doc'                            file_name2   file_name6   file_sort
+'Learn Python Programming Masterclass'   file_name3   file_name7   new_file
+ file_name1                              file_name4   file_name8   packages.txt
+ file_name10                             file_name5   file_name9   xaa
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ cat packages.txt
+A
+B
+J
+L
+B
+I
+M
+Q
+P
+Y
+C
+lkjC
+creating and using packages:
+
+packages are the container which can have procedures,functions,variables,types,exceptions and ...
+
+
+Advantages of packages:
+    -Modularity  (we can use and share different objects in the packages like s
+    -Easy Maintenance
+    -Encapsulation and security(other users cant access the info ,
+        if u specified it in the pacakage body, but for the all users we can spta in the package spec)
+        -Functionality
+        -Performance
+        -OverLoading(in packages overloding is easy and faster)
+
+
+main two reasons of using packages:
+         1.Logically grouping of objects (it reduces the code complexity and cr
+                 2.Performance
+
+
+
+
+        package object visibility:
+        1.local variables  (only accessible to its own object, declared in the
+        2.public variables  (accessible to all who as privilage to access,declaackage spec)
+        3.private variables  (accessible for all objects within the package bodred in the package body)
+
+        PERSISTENT state of packages:
+        ---------------------------
+  PGA(Program/private global area):>(its stores the objects,variables, no otheree or touch/reach these objects, every user has there own PGA'S)
+
+
+                                                                               rage(obj,var,codes,packages)
+
+
+  SGA(System/shared global area):>>its stored shared objects,valuses,codes,pack other users
+
+
+note : pga and sga refer to same memory with diff name
+
+
+1>>>>>
+
+--------------------------------------------------------------------------------------------------------
+--------------------------------------------CREATING & USING PACKAGES-----------------------------------
+--------------------------------------------------------------------------------------------------------
+----------------- Creating first package specification
+CREATE OR REPLACE
+PACKAGE EMP AS
+  v_salary_increase_rate number := 0.057;
+  cursor cur_emps is select * from employees;
+
+  procedure increase_salaries;
+  function get_avg_sal(p_dept_id int) return number;
+END EMP;
+----------------- Creating the package body
+CREATE OR REPLACE
+PACKAGE BODY EMP AS
+  procedure increase_salaries AS
+  BEGIN
+    for r1 in cur_emps loop
+      update employees_copy set salary = salary + salary * v_salary_increase_ra
+    end loop;
+  END increase_salaries;
+  function get_avg_sal(p_dept_id int) return number AS
+  v_avg_sal number := 0;
+  BEGIN
+    select avg(salary) into v_avg_sal from employees_copy where
+          department_id = p_dept_id;
+    RETURN v_avg_sal;
+  END get_avg_sal;
+END EMP;
+----------------- using the subprograms in packages
+exec EMP_PKG.increase_salaries;
+----------------- using the variables in packages
+begin
+  dbms_output.put_line(emp_pkg.get_avg_sal(50));
+  dbms_output.put_line(emp_pkg.v_salary_increase_rate);
+end;
+
+2>>>>>
+
+---------------------------------------------------------------------------------
+--------------------------------VISIBILITY OF VARIABLES IN PACKAGES--------------
+---------------------------------------------------------------------------------
+create or replace PACKAGE BODY EMP_PKG AS
+
+  v_sal_inc int := 500;
+  v_sal_inc2 int := 500;
+
+  procedure print_test is
+  begin
+    dbms_output.put_line('Test : '|| v_sal_inc);
+  end;
+
+  procedure increase_salaries AS
+  BEGIN
+    for r1 in cur_emps loop
+      update employees_copy set salary = salary + salary * v_salary_increase_ra
+      where employee_id = r1.employee_id;
+    end loop;
+  END increase_salaries;
+  function get_avg_sal(p_dept_id int) return number AS
+  v_avg_sal number := 0;
+  BEGIN
+    print_test;
+    select avg(salary) into v_avg_sal from employees_copy where
+          department_id = p_dept_id;
+    RETURN v_avg_sal;
+  END get_avg_sal;
+
+END EMP_PKG;
+
+ --------illegal object Reference and Forward declaration----------------------
+-----------------
+create or replace PACKAGE BODY EMP_PKG AS
+
+  v_sal_inc int := 500;
+  v_sal_inc2 int := 500;
+  function get_sal(e_id employees.employee_id%type) return number;
+
+procedure print_test is
+  begin
+    dbms_output.put_line('Test : '|| v_sal_inc);
+    dbms_output.put_line('Test salary : '|| get_sal(102));
+  end;
+  procedure increase_salaries AS
+  BEGIN
+    for r1 in cur_emps loop
+      update employees_copy set salary = salary + salary * v_salary_increase_ra
+      where employee_id = r1.employee_id;
+    end loop;
+  END increase_salaries;
+  function get_avg_sal(p_dept_id int) return number AS
+  v_avg_sal number := 0;
+  BEGIN
+    print_test;
+    select avg(salary) into v_avg_sal from employees_copy where
+          department_id = p_dept_id;
+    RETURN v_avg_sal;
+  END get_avg_sal;
+
+  function get_sal(e_id employees.employee_id%type) return number is
+  v_sal number := 0;
+  begin
+    select salary into v_sal from employees where employee_id = e_id;
+  end;
+
+end;
+   -------------------------------------Package Initialization-----------------
+
+      create or replace PACKAGE BODY EMP_PKG AS
+
+  v_sal_inc int := 500;
+  v_sal_inc2 int := 500;
+
+  procedure increase_salaries AS
+  BEGIN
+    for r1 in cur_emps loop
+      update employee_cpy set salary = salary + salary * v_salary_increase_rate
+      where employee_id = r1.employee_id;
+    end loop;
+  END increase_salaries;
+  function get_avg_sal(p_dept_id int) return number AS
+  v_avg_sal number := 0;
+  BEGIN
+    select avg(salary) into v_avg_sal from employee_cpy where
+          department_id = p_dept_id;
+    RETURN v_avg_sal;
+  END get_avg_sal;
+begin
+    -- It will overiden the previously initialiazed values in the package spec
+      v_salary_increase_rate :=1500;
+      insert into logs values('EMP_PKG','Package Initialiazed',sysdate);
+END EMP_PKG;
+
+create table logs(log_source varchar2(100),log_message varchar2(1000),log_date
+
+exec dbms_output.put_line(emp_pkg.get_avg_sal(100));
+exec dbms_output.put_line(emp_pkg.v_salary_increase_rate);
+
+select * from logs;
+desc logs;
+
+
+
+3>>>>
+---------------------------------------------------------------------------------
+----------------------------------PERSISTENT STATE OF PACKAGES-------------------
+---------------------------------------------------------------------------------
+-----------------
+execute dbms_output.put_line(constants_pkg.v_salary_increase);
+grant execute on constants_pkg to my_user;
+revoke execute on constants_pkg from my_user;
+-----------------
+-----------------
+begin
+  constants_pkg.v_company_name := 'ACME';
+  dbms_output.put_line(constants_pkg.v_company_name);
+  dbms_lock.sleep(20);
+end;
+exec dbms_output.put_line(constants_pkg.v_company_name);
+-----------------
+create or replace package constants_pkg is
+PRAGMA SERIALLY_REUSABLE;
+  v_salary_increase constant number:= 0.04;
+  cursor cur_emps is select * from employees;
+  t_emps_type employees%rowtype;
+  v_company_name varchar2(20) := 'ORACLE';
+end;
+-----------------
+begin
+  constants_pkg.v_company_name := 'ACME';
+  dbms_output.put_line(constants_pkg.v_company_name);
+  dbms_lock.sleep(20);
+end;
+-----------------
+declare
+v_emp employees%rowtype;
+begin
+ open constants_pkg.cur_emps;
+ fetch constants_pkg.cur_emps into v_emp;
+ dbms_output.put_line(v_emp.first_name);
+ close constants_pkg.cur_emps;
+end;
+-----------------
+declare
+v_emp employees%rowtype;
+begin
+ fetch constants_pkg.cur_emps into v_emp;
+ dbms_output.put_line(v_emp.first_name);
+end;
+
+4>>>>>>>>>>
+
+---------------------------------------------------------------------------------
+---------------------------------USING COLLECTIONS IN PACKAGES-------------------
+---------------------------------------------------------------------------------
+   -it will make code more powerful and more efficient, we can also share the cmoung other subprograms
+
+
+create or replace PACKAGE EMP_PKG AS
+  type emp_table_type is table of employees%rowtype index by pls_integer;
+  v_salary_increase_rate number := 1000;
+  v_min_employee_salary number := 5000;
+  cursor cur_emps is select * from employees;
+
+  procedure increase_salaries;
+  function get_avg_sal(p_dept_id int) return number;
+  v_test int := 4;
+  function get_employees return emp_table_type;
+  function get_employees_tobe_incremented return emp_table_type;
+  procedure increase_low_salaries;
+  function arrange_for_min_salary(v_emp employees%rowtype) return employees%row
+END EMP_PKG;
+----------------- package body
+create or replace PACKAGE BODY EMP_PKG AS
+
+  v_sal_inc int := 500;
+  v_sal_inc2 int := 500;
+  function get_sal(e_id employees.employee_id%type) return number;
+  procedure print_test is
+  begin
+    dbms_output.put_line('Test : '|| v_sal_inc);
+    dbms_output.put_line('Tests salary :'|| get_sal(102));
+  end;
+
+  procedure increase_salaries AS
+  BEGIN
+    for r1 in cur_emps loop
+      update employees_copy set salary = salary + salary * v_salary_increase_ra
+      where employee_id = r1.employee_id;
+    end loop;
+  END increase_salaries;
+  function get_avg_sal(p_dept_id int) return number AS
+  v_avg_sal number := 0;
+  BEGIN
+  print_test;
+    select avg(salary) into v_avg_sal from employees_copy where
+          department_id = p_dept_id;
+    RETURN v_avg_sal;
+  END get_avg_sal;
+
+  function get_sal(e_id employees.employee_id%type) return number is
+  v_sal number := 0;
+  begin
+    select salary into v_sal from employees where employee_id = e_id;
+    return v_sal;
+  end;
+  /*
+    This function returns all the employees in employees table
+  */
+  function get_employees return emp_table_type is
+  v_emps emp_table_type;
+  begin
+    for cur_emps in (select * from employees_copy) loop
+      v_emps(cur_emps.employee_id) := cur_emps;
+    end loop;
+    return v_emps;
+  end;
+  /*
+    This function returns the employees which are under the minimum salary
+    of the company standards and to be incremented by the new minimum salary
+  */
+  function get_employees_tobe_incremented return emp_table_type is
+  v_emps emp_table_type;
+  i employees.employee_id%type;
+  begin
+  v_emps := get_employees;
+  i := v_emps.first;
+    while i is not null loop
+      if v_emps(i).salary > v_min_employee_salary then
+        v_emps.delete(i);
+      end if;
+      i := v_emps.next(i);
+    end loop;
+    return v_emps;
+  end;
+  /*
+    This procedure increases the salary of the employees who has a less salary
+    then the company standard
+  */
+  procedure increase_low_salaries as
+  v_emps emp_table_type;
+  v_emp employees%rowtype;
+  i employees.employee_id%type;
+  begin
+  v_emps := get_employees_tobe_incremented;
+    i := v_emps.first;
+    while i is not null loop
+    v_emp := arrange_for_min_salary(v_emps(i));
+      update employees_copy set row = v_emp
+        where employee_id = i;
+    i := v_emps.next(i);
+    end loop;
+  end increase_low_salaries;
+  /*
+    This function returns the employee by arranging the salary based on the
+    company standard.
+  */
+  function arrange_for_min_salary(v_emp in out employees%rowtype) return employis
+  begin
+    v_emp.salary := v_emp.salary + v_salary_increase_rate;
+    if v_emp.salary < v_min_employee_salary then
+      v_emp.salary := v_min_employee_salary;
+    end if;
+    return v_emp;
+  end;
+  /**********************************************/
+  /*package initialization*/
+BEGIN
+  v_salary_increase_rate := 500;
+  insert into logs values ('EMP_PKG','Package initialized!',sysdate);
+END EMP_PKG;
+
+==========================================================================
+select * from hr.employees;
+select * from employees_copy;
+truncate table employees_copy;
+------------------------------------
+insert into employees_copy  select * from hr.employees;
+-----------------------------------
+execute emp_pkg.increase_low_salaries;
+--------------------------------------
+select * from employees_copy where salary <5000;
+
+
+----------------------------------*********************------------------------
+find packages:
+--------------
+
+two ways:
+1.sql developer tool
+2.Data dictionary views
+    >>>>>the data dictionary views that you can find some information about thee:
+                          -USER_SOURCE/ALL_SOURCE/DBA_SOURCE
+                                                  -USER_OBJECTS/ALL_OBJECTS/DBA
+
+    *select * from user_source;
+        *select * from user_source where type='PACKAGE BODY' and name ='EMP_PKG
+
+        important info for DBA and develper is toc check status of the objects
+        *select * from user_objects;
+        *select * from user_objects where object_type='PACKAGE BODY' and objectPKG';
+
+        select * from user_objects where status ='invalid';
+
+select * from user_source;
+
+select * from user_source where type='PACKAGE BODY' and name ='EMP_PKG';
+select * from user_objects;
+
+select * from user_objects where object_type='PACKAGE BODY' and object_name ='E
+
+select * from user_objects where status ='invalid';
+
+
+https://github.com/porpup/PL-SQL_TRIGGER
+
+https://github.com/srikanthpragada/plsql
+
+https://github.com/JieunKwon/PL_SQL_Procedure_Function
+
+https://github.com/graf-script/plsql-procedure/blob/main/plsql
+
+https://github.com/porpup/PL-SQL_PROCEDURE_Overloading/blob/master/projectPart9
+
+https://github.com/porpup/SQL_Final_Exam
+
+https://github.com/porpup/PL-SQL_Final_Exam
+
+https://github.com/porpup/PL-SQL_VIEW
+
+https://github.com/porpup/PL-SQL_PACKAGE
+
+https://github.com/porpup/PL-SQL_CURSOR_FOR_LOOP
+
+https://github.com/porpup/PL-SQL_CURSOR_with_parameters
+
+https://github.com/porpup/PL-SQL_CURSOR_LOOPs
+
+https://github.com/porpup/PL-SQL_Parameter_Mode
+
+https://github.com/porpup/PL-SQL_SELECT_INTO
+
+https://github.com/porpup/PL-SQL_IF_condition
+
+https://github.com/naveen8853/Ex-No-5-Creating-Triggers-using-PL-SQL
+==============================================================================================
+
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ shuf packages.txt
+  */
+
+      update employee_cpy set salary = salary + salary * v_salary_increase_rate
+      where employee_id = r1.employee_id;
+  v_avg_sal number := 0;
+
+  procedure increase_salaries AS
+----------------- Creating the package body
+  end;
+
+    end loop;
+
+    RETURN v_avg_sal;
+  end;
+  procedure print_test is
+    *select * from user_source;
+    for r1 in cur_emps loop
+end;
+                 2.Performance
+
+v_emp employees%rowtype;
+  BEGIN
+
+      update employees_copy set salary = salary + salary * v_salary_increase_ra
+I
+    for r1 in cur_emps loop
+  function get_avg_sal(p_dept_id int) return number AS
+        select * from user_objects where status ='invalid';
+
+  type emp_table_type is table of employees%rowtype index by pls_integer;
+
+begin
+-----------------
+https://github.com/porpup/PL-SQL_SELECT_INTO
+grant execute on constants_pkg to my_user;
+  function get_avg_sal(p_dept_id int) return number;
+ fetch constants_pkg.cur_emps into v_emp;
+  END get_avg_sal;
+    -Easy Maintenance
+A
+    select salary into v_sal from employees where employee_id = e_id;
+
+https://github.com/JieunKwon/PL_SQL_Procedure_Function
+select * from employees_copy;
+
+    end loop;
+begin
+
+  v_avg_sal number := 0;
+  END increase_salaries;
+        1.local variables  (only accessible to its own object, declared in the
+      where employee_id = r1.employee_id;
+
+  v_sal_inc int := 500;
+  v_sal_inc2 int := 500;
+3>>>>
+
+
+https://github.com/graf-script/plsql-procedure/blob/main/plsql
+
+
+  END increase_salaries;
+    print_test;
+--------------------------------------------------------------------------------------------------------
+truncate table employees_copy;
+  function arrange_for_min_salary(v_emp in out employees%rowtype) return employis
+  v_company_name varchar2(20) := 'ORACLE';
+  begin
+    while i is not null loop
+
+  end;
+
+https://github.com/porpup/PL-SQL_PACKAGE
+https://github.com/porpup/PL-SQL_IF_condition
+    for r1 in cur_emps loop
+v_emp employees%rowtype;
+  begin
+Q
+  /*
+  function get_avg_sal(p_dept_id int) return number AS
+  v_sal_inc int := 500;
+  v_sal_inc int := 500;
+    >>>>>the data dictionary views that you can find some information about thee:
+end;
+
+  v_salary_increase_rate number := 0.057;
+  begin
+  v_emps := get_employees_tobe_incremented;
+      v_emps(cur_emps.employee_id) := cur_emps;
+    end loop;
+    return v_sal;
+ fetch constants_pkg.cur_emps into v_emp;
+    -Modularity  (we can use and share different objects in the packages like s
+    end loop;
+B
+  i employees.employee_id%type;
+          department_id = p_dept_id;
+---------------------------------------------------------------------------------
+creating and using packages:
+  dbms_output.put_line(emp_pkg.v_salary_increase_rate);
+        v_emps.delete(i);
+
+create or replace PACKAGE BODY EMP_PKG AS
+      if v_emps(i).salary > v_min_employee_salary then
+  function get_employees_tobe_incremented return emp_table_type is
+CREATE OR REPLACE
+  BEGIN
+
+        -Functionality
+exec dbms_output.put_line(constants_pkg.v_company_name);
+exec EMP_PKG.increase_salaries;
+    RETURN v_avg_sal;
+----------------------------------*********************------------------------
+  procedure increase_salaries AS
+  procedure increase_salaries;
+  i employees.employee_id%type;
+1.sql developer tool
+  /*
+select * from user_objects where status ='invalid';
+  END increase_salaries;
+         1.Logically grouping of objects (it reduces the code complexity and cr
+      update employees_copy set salary = salary + salary * v_salary_increase_ra
+  v_sal_inc int := 500;
+  i := v_emps.first;
+      insert into logs values('EMP_PKG','Package Initialiazed',sysdate);
+https://github.com/naveen8853/Ex-No-5-Creating-Triggers-using-PL-SQL
+  begin
+--------------------------------------
+  t_emps_type employees%rowtype;
+1>>>>>
+    end if;
+execute dbms_output.put_line(constants_pkg.v_salary_increase);
+        *select * from user_source where type='PACKAGE BODY' and name ='EMP_PKG
+
+  begin
+
+    RETURN v_avg_sal;
+        ---------------------------
+ close constants_pkg.cur_emps;
+procedure print_test is
+                          -USER_SOURCE/ALL_SOURCE/DBA_SOURCE
+                                                  -USER_OBJECTS/ALL_OBJECTS/DBA
+  v_emp employees%rowtype;
+
+  v_min_employee_salary number := 5000;
+  BEGIN
+execute emp_pkg.increase_low_salaries;
+exec dbms_output.put_line(emp_pkg.get_avg_sal(100));
+  */
+    select avg(salary) into v_avg_sal from employees_copy where
+  end increase_low_salaries;
+    i := v_emps.first;
+----------------- Creating first package specification
+  cursor cur_emps is select * from employees;
+    select avg(salary) into v_avg_sal from employee_cpy where
+        where employee_id = i;
+    This function returns the employees which are under the minimum salary
+  cursor cur_emps is select * from employees;
+
+Advantages of packages:
+----------------- package body
+  function get_employees_tobe_incremented return emp_table_type;
+-----------------
+
+--------------------------------------------CREATING & USING PACKAGES-----------------------------------
+END EMP_PKG;
+create table logs(log_source varchar2(100),log_message varchar2(1000),log_date
+  cursor cur_emps is select * from employees;
+    dbms_output.put_line('Tests salary :'|| get_sal(102));
+  v_sal number := 0;
+------------------------------------
+    -- It will overiden the previously initialiazed values in the package spec
+
+  v_emps emp_table_type;
+https://github.com/porpup/PL-SQL_TRIGGER
+          department_id = p_dept_id;
+--------------------------------------------------------------------------------------------------------
+    RETURN v_avg_sal;
+Y
+  END get_avg_sal;
+        -OverLoading(in packages overloding is easy and faster)
+      v_emp.salary := v_min_employee_salary;
+        2.public variables  (accessible to all who as privilage to access,declaackage spec)
+  end;
+
+packages are the container which can have procedures,functions,variables,types,exceptions and ...
+  procedure increase_low_salaries;
+
+  function get_avg_sal(p_dept_id int) return number;
+    select avg(salary) into v_avg_sal from employees_copy where
+PACKAGE EMP AS
+  function get_sal(e_id employees.employee_id%type) return number is
+
+    select salary into v_sal from employees where employee_id = e_id;
+  */
+lkjC
+END EMP;
+  dbms_output.put_line(constants_pkg.v_company_name);
+  procedure print_test is
+    v_emp := arrange_for_min_salary(v_emps(i));
+  v_sal_inc2 int := 500;
+
+   -------------------------------------Package Initialization-----------------
+
+
+  v_salary_increase_rate := 500;
+        -Performance
+
+create or replace PACKAGE BODY EMP_PKG AS
+END EMP_PKG;
+  function arrange_for_min_salary(v_emp employees%rowtype) return employees%row
+--------------------------------VISIBILITY OF VARIABLES IN PACKAGES--------------
+    dbms_output.put_line('Test salary : '|| get_sal(102));
+        *select * from user_objects;
+
+declare
+          department_id = p_dept_id;
+https://github.com/porpup/PL-SQL_VIEW
+end;
+  procedure increase_salaries AS
+      i := v_emps.next(i);
+L
+https://github.com/porpup/PL-SQL_Final_Exam
+---------------------------------------------------------------------------------
+
+    company standard.
+  */
+  v_emps emp_table_type;
+  v_test int := 4;
+BEGIN
+  dbms_output.put_line(emp_pkg.get_avg_sal(50));
+
+  end;
+----------------- using the variables in packages
+      update employees_copy set salary = salary + salary * v_salary_increase_ra
+-----------------
+
+      where employee_id = r1.employee_id;
+    This procedure increases the salary of the employees who has a less salary
+  PGA(Program/private global area):>(its stores the objects,variables, no otheree or touch/reach these objects, every user has there own PGA'S)
+  v_emps emp_table_type;
+revoke execute on constants_pkg from my_user;
+    v_emp.salary := v_emp.salary + v_salary_increase_rate;
+
+      end if;
+create or replace package constants_pkg is
+end;
+2.Data dictionary views
+    dbms_output.put_line('Test : '|| v_sal_inc);
+
+
+      where employee_id = r1.employee_id;
+----------------------------------PERSISTENT STATE OF PACKAGES-------------------
+  procedure increase_salaries AS
+end;
+
+  BEGIN
+        if u specified it in the pacakage body, but for the all users we can spta in the package spec)
+ dbms_output.put_line(v_emp.first_name);
+  /*
+begin
+  end;
+    dbms_output.put_line('Test : '|| v_sal_inc);
+  function get_sal(e_id employees.employee_id%type) return number;
+
+select * from user_source;
+find packages:
+-----------------
+-----------------
+
+    end loop;
+end;
+
+  function get_avg_sal(p_dept_id int) return number AS
+  procedure increase_salaries;
+    for r1 in cur_emps loop
+create or replace PACKAGE BODY EMP_PKG AS
+CREATE OR REPLACE
+
+---------------------------------------------------------------------------------
+        important info for DBA and develper is toc check status of the objects
+https://github.com/porpup/PL-SQL_Parameter_Mode
+https://github.com/porpup/SQL_Final_Exam
+
+
+END EMP_PKG;
+-----------------------------------
+
+    This function returns all the employees in employees table
+-----------------
+----------------- using the subprograms in packages
+  END increase_salaries;
+    if v_emp.salary < v_min_employee_salary then
+    select avg(salary) into v_avg_sal from employees_copy where
+  begin
+END EMP;
+  END increase_salaries;
+select * from hr.employees;
+        package object visibility:
+
+  END get_avg_sal;
+      update employees_copy set salary = salary + salary * v_salary_increase_ra
+
+
+  insert into logs values ('EMP_PKG','Package initialized!',sysdate);
+  function get_employees return emp_table_type is
+  v_salary_increase_rate number := 1000;
+    of the company standards and to be incremented by the new minimum salary
+  v_sal_inc2 int := 500;
+select * from employees_copy where salary <5000;
+  constants_pkg.v_company_name := 'ACME';
+    while i is not null loop
+    then the company standard
+
+
+  SGA(System/shared global area):>>its stored shared objects,valuses,codes,pack other users
+---------------------------------------------------------------------------------
+  /**********************************************/
+https://github.com/srikanthpragada/plsql
+2>>>>>
+END EMP_PKG;
+          department_id = p_dept_id;
+    end loop;
+4>>>>>>>>>>
+  procedure increase_low_salaries as
+
+
+  procedure increase_salaries AS
+---------------------------------------------------------------------------------
+
+https://github.com/porpup/PL-SQL_CURSOR_LOOPs
+select * from user_source where type='PACKAGE BODY' and name ='EMP_PKG';
+
+-----------------
+two ways:
+select * from user_objects;
+  begin
+    This function returns the employee by arranging the salary based on the
+ dbms_output.put_line(v_emp.first_name);
+      update employees_copy set row = v_emp
+
+end;
+  function get_sal(e_id employees.employee_id%type) return number;
+  BEGIN
+
+    select avg(salary) into v_avg_sal from employees_copy where
+  BEGIN
+
+  begin
+-----------------
+B
+    return v_emps;
+  /*
+
+
+    -Encapsulation and security(other users cant access the info ,
+https://github.com/porpup/PL-SQL_CURSOR_with_parameters
+---------------------------------USING COLLECTIONS IN PACKAGES-------------------
+  v_salary_increase constant number:= 0.04;
+   -it will make code more powerful and more efficient, we can also share the cmoung other subprograms
+declare
+
+    for r1 in cur_emps loop
+    return v_emp;
+    i := v_emps.next(i);
+      v_salary_increase_rate :=1500;
+
+  v_avg_sal number := 0;
+
+begin
+  function get_avg_sal(p_dept_id int) return number AS
+  end;
+
+  begin
+  BEGIN
+  dbms_lock.sleep(20);
+
+  END get_avg_sal;
+  v_sal_inc2 int := 500;
+  v_avg_sal number := 0;
+        PERSISTENT state of packages:
+  BEGIN
+desc logs;
+J
+  /*package initialization*/
+  print_test;
+  function get_employees return emp_table_type;
+
+
+  v_avg_sal number := 0;
+==========================================================================
+                                                                               rage(obj,var,codes,packages)
+  constants_pkg.v_company_name := 'ACME';
+https://github.com/porpup/PL-SQL_CURSOR_FOR_LOOP
+  dbms_output.put_line(constants_pkg.v_company_name);
+main two reasons of using packages:
+begin
+
+select * from user_objects where object_type='PACKAGE BODY' and object_name ='E
+insert into employees_copy  select * from hr.employees;
+    end loop;
+
+  dbms_lock.sleep(20);
+
+  v_emps := get_employees;
+          department_id = p_dept_id;
+  BEGIN
+C
+  function get_avg_sal(p_dept_id int) return number AS
+
+select * from logs;
+    return v_emps;
+ open constants_pkg.cur_emps;
+    print_test;
+  end;
+ --------illegal object Reference and Forward declaration----------------------
+    dbms_output.put_line('Test : '|| v_sal_inc);
+  BEGIN
+  function get_sal(e_id employees.employee_id%type) return number is
+    for cur_emps in (select * from employees_copy) loop
+https://github.com/porpup/PL-SQL_PROCEDURE_Overloading/blob/master/projectPart9
+begin
+
+---------------------------------------------------------------------------------
+  v_sal number := 0;
+        *select * from user_objects where object_type='PACKAGE BODY' and objectPKG';
+        3.private variables  (accessible for all objects within the package bodred in the package body)
+create or replace PACKAGE EMP_PKG AS
+note : pga and sga refer to same memory with diff name
+      create or replace PACKAGE BODY EMP_PKG AS
+    RETURN v_avg_sal;
+exec dbms_output.put_line(emp_pkg.v_salary_increase_rate);
+PRAGMA SERIALLY_REUSABLE;
+  END get_avg_sal;
+
+P
+M
+PACKAGE BODY EMP AS
+    end loop;
+--------------
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ ^C
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ wc -l packages.txt
+440 packages.txt
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ ls
+'!qhlogs.doc'                            file_name2   file_name6   file_sort
+'Learn Python Programming Masterclass'   file_name3   file_name7   new_file
+ file_name1                              file_name4   file_name8   packages.txt
+ file_name10                             file_name5   file_name9   xaa
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ vi file_name1
+E1187: Failed to source defaults.vim
+Press ENTER or type command to continue
+[1]+  Stopped                 vi file_name1
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ vi file_name1
+E1187: Failed to source defaults.vim
+Press ENTER or type command to continue
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ vi file_name2
+E1187: Failed to source defaults.vim
+Press ENTER or type command to continue
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ cat file_name2
+HI
+I AM RAHUL
+I AM FROM HUBLI
+B
+C
+I
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ cat file_name1
+HI
+I AM KALLAPPA
+READING IS MY HOBBY
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ cmp file_name1 file_name2
+file_name1 file_name2 differ: char 9, line 2
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ vi file_name3
+E1187: Failed to source defaults.vim
+Press ENTER or type command to continue
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ cat file_name3
+HI
+I AM KALLAPPA
+READING IS MY HOBBY
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ cmp file_name1 file_name3
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ diff file_name1 file_name3
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ diff file_name1 file_name2
+2,3c2,6
+< I AM KALLAPPA
+< READING IS MY HOBBY
+---
+> I AM RAHUL
+> I AM FROM HUBLI
+> B
+> C
+> I
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ diff -u file_name1 file_name2
+--- file_name1  2024-02-11 18:01:28.291322600 +0530
++++ file_name2  2024-02-11 18:02:33.106383000 +0530
+@@ -1,3 +1,6 @@
+ HI
+-I AM KALLAPPA
+-READING IS MY HOBBY
++I AM RAHUL
++I AM FROM HUBLI
++B
++C
++I
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ cd
+
+Lenovo@DESKTOP-HAGIJ1L ~
+$ find ./ -name packages.txt
+
+Lenovo@DESKTOP-HAGIJ1L ~
+$ cd e:
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ find ./ -name packages.txt
+find: ‘./$RECYCLE.BIN/S-1-5-18’: Permission denied
+find: ‘./$RECYCLE.BIN/S-1-5-21-1720217662-3879409120-1716123573-1001’: Permissi
+find: ‘./$RECYCLE.BIN/S-1-5-21-4168124328-659022319-2712543296-1001’: Permissio
+find: ‘./Config.Msi’: Permission denied
+
+
+
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ locate packages.txt
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ find /cygdrive/e/ -name packages.txt
+find: ‘/cygdrive/e/$RECYCLE.BIN/S-1-5-18’: Permission denied
+find: ‘/cygdrive/e/$RECYCLE.BIN/S-1-5-21-1720217662-3879409120-1716123573-1001’ denied
+find: ‘/cygdrive/e/$RECYCLE.BIN/S-1-5-21-4168124328-659022319-2712543296-1001’:denied
+find: ‘/cygdrive/e/k20/cfgtoollogs/dbca/orcle11’: Permission denied
+find: ‘/cygdrive/e/k20/dbs’: Permission denied
+
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ cd 'new folder'
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ find /cygdrive/e/ -name packages.txt
+find: ‘/cygdrive/e/$RECYCLE.BIN/S-1-5-18’: Permission denied
+find: ‘/cygdrive/e/$RECYCLE.BIN/S-1-5-21-1720217662-3879409120-1716123573-1001’ denied
+find: ‘/cygdrive/e/$RECYCLE.BIN/S-1-5-21-4168124328-659022319-2712543296-1001’:denied
+find: ‘/cygdrive/e/Config.Msi’: Permission denied
+find: ‘/cygdrive/e/k20/cfgtoollogs/dbca/orcle11’: Permission denied
+find: ‘/cygdrive/e/k20/dbs’: Permission denied
+
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ locate packages.txt
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ ls
+'!qhlogs.doc'                            file_name2   file_name6   file_sort
+'Learn Python Programming Masterclass'   file_name3   file_name7   new_file
+ file_name1                              file_name4   file_name8   packages.txt
+ file_name10                             file_name5   file_name9   xaa
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ locate file_name1
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ cd ..
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ locate file_name1
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ find /cygdrive/e/ -name file_name1
+find: ‘/cygdrive/e/$RECYCLE.BIN/S-1-5-18’: Permission denied
+find: ‘/cygdrive/e/$RECYCLE.BIN/S-1-5-21-1720217662-3879409120-1716123573-1001’ denied
+find: ‘/cygdrive/e/$RECYCLE.BIN/S-1-5-21-4168124328-659022319-2712543296-1001’:denied
+find: ‘/cygdrive/e/Config.Msi’: Permission denied
+
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ updatedb
+
+
+
+[2]+  Stopped                 updatedb
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ echo hi everyone
+hi everyone
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ History
+-bash: History: command not found
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ history
+    1  pwd
+    2  whoami
+    3  date
+    4  date +%D
+    5  date +%T
+    6  date +%H:%M
+    7  ls
+    8  ls -lt
+    9  ls -ltr
+   10  cd e:
+   11  pwd
+   12  ls
+   13  ls -lt
+   14  ls -ltr
+   15  ls -lh
+   16  cat
+   17  cat hibernateusageprocedure.txt
+   18  less hibernateusageprocedure.txt
+   19  ls
+   20  more packages.txt
+   21  more packages.txt
+   22  more hibernateusageprocedure.txt
+   23  touch new_FILE
+   24  ls
+   25  rm new_FILE
+   26  ls
+   27* vi
+   28  ls
+   29  cat NEW_FILE
+   30  vi packages.txt
+   31*  packages.txt
+   32  nano NEW_FILE
+   33  nano NEW_FILE
+   34  mkdir NEW_FOLDER123
+   35  mkdir NEW_FOLDER123/folder_in_folder/last_folder
+   36  mkdir NEW_FOLDER1234/folder_in_folder/last_folder
+   37  mkdir NEW_FOLDER123/folder_in
+   38  ls
+   39  cd NEW_FOLDER123
+   40  ls
+   41  rmdir folder_in
+   42  ls
+   43  rm -rf NEW_FOLDER123
+   44  /
+   45  :/
+   46  :
+   47  e:
+   48  cd \
+   49  cd /
+   50  pwd
+   51  cd :
+   52  cd e:
+   53  cd \
+   54  cd \
+   55  cd /
+   56  cd e:
+   57  cd /
+   58  pwd
+   59  cd e:
+   60  ls
+   61  cd NEW_FOLDER123
+   62  cd
+   63  cd e:
+   64  cd NEW_FOLDER123
+   65  cd /
+   66  cd e:
+   67  cd NEW_FOLDER123
+   68  e:
+   69  cd/
+   70  cd
+   71  cd :
+   72  cd e:
+   73  cd/
+   74  rm -rf NEW_FOLDER123
+   75  ls
+   76  cd seriese
+   77  ls
+   78  cd redmi 3s
+   79  cd 'redmi 3s'
+   80  ls
+   81  cd Musick
+   82  ls
+   83  cd ..
+   84  cd ../..
+   85  cd /
+   86  ls
+   87  cd home
+   88  ls
+   89  cd lenovo
+   90  ls
+   91  cd e:
+   92  ls
+   93  cd new_file
+   94  cd 'new folder'
+   95  touch new_file
+   96  cp packages.txt /'new folder'
+   97  cd ..
+   98  cp packages.txt /'new folder'
+   99  cd 'new folder'
+  100  ls
+  101  cp packages.txt 'new folder'
+  102  cd ..
+  103  cp packages.txt 'new folder'
+  104  cd 'new folder'
+  105  ls
+  106  cd ..
+  107  ls
+  108  cd 'new folder'
+  109  cp ../C_T_E .
+  110  cp ../'!qhlogs.doc' .
+  111  ls
+  112  cp packages.txt packages_copy.txt
+  113  ls
+  114  mv package_copy  /cygdrive/e/
+  115  mv package_copy.txt  /cygdrive/e/
+  116  mv packages_copy  /cygdrive/e/
+  117  mv packages_copy.txt  /cygdrive/e/
+  118  ls
+  119  cd ..
+  120  ls
+  121  mv packages_copy.txt  packages_copy_updated_name.txt
+  122  ls
+  123  cd 'new folder'
+  124  ls
+  125  head -3 packages.txt
+  126* vi
+  127  tail -10 packages.txt
+  128  vi packages.txt
+  129  cat packages.txt
+  130  clear
+  131  sort packages.txt
+  132  clear
+  133  touch file_sort
+  134  vi file_sort
+  135  cat file_sort
+  136  sort file_sort
+  137  sort -r file_sort
+  138  vi file_sort
+  139  cat file_sort
+  140  sort file_sort | uniq
+  141  split -l 5 file_sort
+  142  ls
+  143  cat xac
+  144  cat xaa
+  145  less packages.txt
+  146  grep "objects" packages.txt
+  147  grep "objects"|"accessible" packages.txt
+  148  grep "objects|accessible" packages.txt
+  149  egrep "objects|accessible" packages.txt
+  150  ls
+  151  ls xa*
+  152  ls *.txt
+  153  ls *.csv
+  154  touch file_name{1..10}
+  155  ls
+  156  cat packages.txt
+  157  shuf packages.txt
+  158  wc -l packages.txt
+  159  ls
+  160  vi file_name1
+  161  vi file_name1
+  162  vi file_name2
+  163  cat file_name2
+  164  cat file_name1
+  165  cmp file_name1 file_name2
+  166  vi file_name3
+  167  cat file_name3
+  168  cmp file_name1 file_name3
+  169  diff file_name1 file_name3
+  170  diff file_name1 file_name2
+  171  diff -u file_name1 file_name2
+  172  cd
+  173  find ./ -name packages.txt
+  174  cd e:
+  175  find ./ -name packages.txt
+  176  locate packages.txt
+[3]+  Stopped                 man lsges.txt
+  178  cd 'new folder'
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/ekages.txt
+$
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ man date
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ history |grep ltr
+    9  ls -ltr
+   14  ls -ltr
+  192  history |grep ltr
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ history |grep ls
+    7  ls
+    8  ls -lt
+    9  ls -ltr
+   12  ls
+   13  ls -lt
+   14  ls -ltr
+   15  ls -lh
+   19  ls
+   24  ls
+   26  ls
+   28  ls
+   38  ls
+   40  ls
+   42  ls
+   60  ls
+   75  ls
+   77  ls
+   80  ls
+   82  ls
+   86  ls
+   88  ls
+   90  ls
+   92  ls
+  100  ls
+  105  ls
+  107  ls
+  111  ls
+  113  ls
+  118  ls
+  120  ls
+  122  ls
+  124  ls
+  142  ls
+  150  ls
+  151  ls xa*
+  152  ls *.txt
+  153  ls *.csv
+  155  ls
+  159  ls
+  181  ls
+  190  man ls
+  193  history |grep ls
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ history |grep mv
+  114  mv package_copy  /cygdrive/e/
+  115  mv package_copy.txt  /cygdrive/e/
+  116  mv packages_copy  /cygdrive/e/
+  117  mv packages_copy.txt  /cygdrive/e/
+  121  mv packages_copy.txt  packages_copy_updated_name.txt
+  194  history |grep mv
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ bc
+-bash: bc: command not found
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ cal
+    February 2024
+Su Mo Tu We Th Fr Sa
+             1  2  3
+ 4  5  6  7  8  9 10
+11 12 13 14 15 16 17
+18 19 20 21 22 23 24
+25 26 27 28 29
+
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ cal 2023
+                               2023
+
+       January               February                 March
+Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa
+ 1  2  3  4  5  6  7             1  2  3  4             1  2  3  4
+ 8  9 10 11 12 13 14    5  6  7  8  9 10 11    5  6  7  8  9 10 11
+15 16 17 18 19 20 21   12 13 14 15 16 17 18   12 13 14 15 16 17 18
+22 23 24 25 26 27 28   19 20 21 22 23 24 25   19 20 21 22 23 24 25
+29 30 31               26 27 28               26 27 28 29 30 31
+
+        April                   May                   June
+Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa
+                   1       1  2  3  4  5  6                1  2  3
+ 2  3  4  5  6  7  8    7  8  9 10 11 12 13    4  5  6  7  8  9 10
+ 9 10 11 12 13 14 15   14 15 16 17 18 19 20   11 12 13 14 15 16 17
+16 17 18 19 20 21 22   21 22 23 24 25 26 27   18 19 20 21 22 23 24
+23 24 25 26 27 28 29   28 29 30 31            25 26 27 28 29 30
+30
+        July                  August                September
+Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa
+                   1          1  2  3  4  5                   1  2
+ 2  3  4  5  6  7  8    6  7  8  9 10 11 12    3  4  5  6  7  8  9
+ 9 10 11 12 13 14 15   13 14 15 16 17 18 19   10 11 12 13 14 15 16
+16 17 18 19 20 21 22   20 21 22 23 24 25 26   17 18 19 20 21 22 23
+23 24 25 26 27 28 29   27 28 29 30 31         24 25 26 27 28 29 30
+30 31
+       October               November               December
+Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa
+ 1  2  3  4  5  6  7             1  2  3  4                   1  2
+ 8  9 10 11 12 13 14    5  6  7  8  9 10 11    3  4  5  6  7  8  9
+15 16 17 18 19 20 21   12 13 14 15 16 17 18   10 11 12 13 14 15 16
+22 23 24 25 26 27 28   19 20 21 22 23 24 25   17 18 19 20 21 22 23
+29 30 31               26 27 28 29 30         24 25 26 27 28 29 30
+                                              31
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ cal jan 2022
+    January 2022
+Su Mo Tu We Th Fr Sa
+                   1
+ 2  3  4  5  6  7  8
+ 9 10 11 12 13 14 15
+16 17 18 19 20 21 22
+23 24 25 26 27 28 29
+30 31
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ uptime
+-bash: uptime: command not found
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ cb
+-bash: cb: command not found
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ bc
+-bash: bc: command not found
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ cd
+
+Lenovo@DESKTOP-HAGIJ1L ~
+$ uptime
+-bash: uptime: command not found
+
+Lenovo@DESKTOP-HAGIJ1L ~
+$ bc
+-bash: bc: command not found
+
+Lenovo@DESKTOP-HAGIJ1L ~
+$ which ls
+/usr/bin/ls
+
+Lenovo@DESKTOP-HAGIJ1L ~
+$ which man
+/usr/bin/man
+
+Lenovo@DESKTOP-HAGIJ1L ~
+$ history |grep sort
+  131  sort packages.txt
+  133  touch file_sort
+  134  vi file_sort
+  135  cat file_sort
+  136  sort file_sort
+  137  sort -r file_sort
+  138  vi file_sort
+  139  cat file_sort
+  140  sort file_sort | uniq
+  141  split -l 5 file_sort
+  207  history |grep sort
+
+Lenovo@DESKTOP-HAGIJ1L ~
+$ script
+Script started, file is typescript
+
+Lenovo@DESKTOP-HAGIJ1L ~
+$ ls
+typescript  unix_demo
+
+Lenovo@DESKTOP-HAGIJ1L ~
+$ cd e:
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ ls
+'!qhlogs.doc'                               'New folder'
+'$RECYCLE.BIN'                               PACKAGES.txt
+ 10699226_SQLFILES                           Seriese
+ 14SpringJDBCTemplate-20220311T042247Z-001  'Sping MVC -20220310T063616Z-001'
+ Azure                                      'System Volume Information'
+ C_TO_E                                      angular
+'Combined Community Codec Pack 64bit'        eclipse
+ Config.Msi                                  first-spring-boot-project
+ Drivers                                    'folder CCCCC'
+ EclipseWorkplace                            hibernateusageprocedure.txt
+ GITHUBF                                    'java programming language'
+ Hibernet                                    java-2021-06
+ INtroduction                                java1.8
+ JDeveloper                                  java8
+ LNTDEVops                                   k20
+ LNTJAVA                                     lntproject
+ LNTSQLDB                                    movies
+ LNTWEB                                      ngrok-stable-windows-amd64
+ LNT_JENKINS                                 oracle
+ LNT_MAVEN                                   packages_copy_updated_name.txt
+ LNT_NGROK                                   photos
+ Music                                       practice
+ NEW_FILE                                    soa_softwares
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ cat packages.txt
+lkjC
+creating and using packages:
+
+packages are the container which can have procedures,functions,variables,types,collections,exceptions and ...
+
+
+Advantages of packages:
+    -Modularity  (we can use and share different objects in the packages like subprograms )
+    -Easy Maintenance
+    -Encapsulation and security(other users cant access the info ,
+        if u specified it in the pacakage body, but for the all users we can specify the data in the package spec)
+        -Functionality
+        -Performance
+        -OverLoading(in packages overloding is easy and faster)
+
+
+main two reasons of using packages:
+         1.Logically grouping of objects (it reduces the code complexity and crowded code);
+                 2.Performance
+
+
+
+
+        package object visibility:
+        1.local variables  (only accessible to its own object, declared in the subprograms)
+        2.public variables  (accessible to all who as privilage to access,declared in the package spec)
+        3.private variables  (accessible for all objects within the package body, its declared in the package body)
+
+        PERSISTENT state of packages:
+        ---------------------------
+  PGA(Program/private global area):>(its stores the objects,variables, no other users can see or touch/reach these objects, every user has there own PGA'S)
+
+
+                                                                                        Storage(obj,var,codes,packages)
+
+
+  SGA(System/shared global area):>>its stored shared objects,valuses,codes,packages for all other users
+
+
+note : pga and sga refer to same memory with diff name
+
+
+1>>>>>
+
+--------------------------------------------------------------------------------------------------------------------
+--------------------------------------------CREATING & USING PACKAGES-----------------------------------------------
+--------------------------------------------------------------------------------------------------------------------
+----------------- Creating first package specification
+CREATE OR REPLACE
+PACKAGE EMP AS
+  v_salary_increase_rate number := 0.057;
+  cursor cur_emps is select * from employees;
+
+  procedure increase_salaries;
+  function get_avg_sal(p_dept_id int) return number;
+END EMP;
+----------------- Creating the package body
+CREATE OR REPLACE
+PACKAGE BODY EMP AS
+  procedure increase_salaries AS
+  BEGIN
+    for r1 in cur_emps loop
+      update employees_copy set salary = salary + salary * v_salary_increase_rate;
+    end loop;
+  END increase_salaries;
+  function get_avg_sal(p_dept_id int) return number AS
+  v_avg_sal number := 0;
+  BEGIN
+    select avg(salary) into v_avg_sal from employees_copy where
+          department_id = p_dept_id;
+    RETURN v_avg_sal;
+  END get_avg_sal;
+END EMP;
+----------------- using the subprograms in packages
+exec EMP_PKG.increase_salaries;
+----------------- using the variables in packages
+begin
+  dbms_output.put_line(emp_pkg.get_avg_sal(50));
+  dbms_output.put_line(emp_pkg.v_salary_increase_rate);
+end;
+
+2>>>>>
+
+---------------------------------------------------------------------------------------------
+--------------------------------VISIBILITY OF VARIABLES IN PACKAGES--------------------------
+---------------------------------------------------------------------------------------------
+create or replace PACKAGE BODY EMP_PKG AS
+
+  v_sal_inc int := 500;
+  v_sal_inc2 int := 500;
+
+  procedure print_test is
+  begin
+    dbms_output.put_line('Test : '|| v_sal_inc);
+  end;
+
+  procedure increase_salaries AS
+  BEGIN
+    for r1 in cur_emps loop
+      update employees_copy set salary = salary + salary * v_salary_increase_rate
+      where employee_id = r1.employee_id;
+    end loop;
+  END increase_salaries;
+  function get_avg_sal(p_dept_id int) return number AS
+  v_avg_sal number := 0;
+  BEGIN
+    print_test;
+    select avg(salary) into v_avg_sal from employees_copy where
+          department_id = p_dept_id;
+    RETURN v_avg_sal;
+  END get_avg_sal;
+
+END EMP_PKG;
+
+ --------illegal object Reference and Forward declaration--------------------------------
+-----------------
+create or replace PACKAGE BODY EMP_PKG AS
+
+  v_sal_inc int := 500;
+  v_sal_inc2 int := 500;
+  function get_sal(e_id employees.employee_id%type) return number;
+
+procedure print_test is
+  begin
+    dbms_output.put_line('Test : '|| v_sal_inc);
+    dbms_output.put_line('Test salary : '|| get_sal(102));
+  end;
+  procedure increase_salaries AS
+  BEGIN
+    for r1 in cur_emps loop
+      update employees_copy set salary = salary + salary * v_salary_increase_rate
+      where employee_id = r1.employee_id;
+    end loop;
+  END increase_salaries;
+  function get_avg_sal(p_dept_id int) return number AS
+  v_avg_sal number := 0;
+  BEGIN
+    print_test;
+    select avg(salary) into v_avg_sal from employees_copy where
+          department_id = p_dept_id;
+    RETURN v_avg_sal;
+  END get_avg_sal;
+
+  function get_sal(e_id employees.employee_id%type) return number is
+  v_sal number := 0;
+  begin
+    select salary into v_sal from employees where employee_id = e_id;
+  end;
+
+end;
+   -------------------------------------Package Initialization---------------------
+
+      create or replace PACKAGE BODY EMP_PKG AS
+
+  v_sal_inc int := 500;
+  v_sal_inc2 int := 500;
+
+  procedure increase_salaries AS
+  BEGIN
+    for r1 in cur_emps loop
+      update employee_cpy set salary = salary + salary * v_salary_increase_rate
+      where employee_id = r1.employee_id;
+    end loop;
+  END increase_salaries;
+  function get_avg_sal(p_dept_id int) return number AS
+  v_avg_sal number := 0;
+  BEGIN
+    select avg(salary) into v_avg_sal from employee_cpy where
+          department_id = p_dept_id;
+    RETURN v_avg_sal;
+  END get_avg_sal;
+begin
+    -- It will overiden the previously initialiazed values in the package spec
+      v_salary_increase_rate :=1500;
+      insert into logs values('EMP_PKG','Package Initialiazed',sysdate);
+END EMP_PKG;
+
+create table logs(log_source varchar2(100),log_message varchar2(1000),log_date date);
+
+exec dbms_output.put_line(emp_pkg.get_avg_sal(100));
+exec dbms_output.put_line(emp_pkg.v_salary_increase_rate);
+
+select * from logs;
+desc logs;
+
+
+
+3>>>>
+---------------------------------------------------------------------------------------------
+----------------------------------PERSISTENT STATE OF PACKAGES-------------------------------
+---------------------------------------------------------------------------------------------
+-----------------
+execute dbms_output.put_line(constants_pkg.v_salary_increase);
+grant execute on constants_pkg to my_user;
+revoke execute on constants_pkg from my_user;
+-----------------
+-----------------
+begin
+  constants_pkg.v_company_name := 'ACME';
+  dbms_output.put_line(constants_pkg.v_company_name);
+  dbms_lock.sleep(20);
+end;
+exec dbms_output.put_line(constants_pkg.v_company_name);
+-----------------
+create or replace package constants_pkg is
+PRAGMA SERIALLY_REUSABLE;
+  v_salary_increase constant number:= 0.04;
+  cursor cur_emps is select * from employees;
+  t_emps_type employees%rowtype;
+  v_company_name varchar2(20) := 'ORACLE';
+end;
+-----------------
+begin
+  constants_pkg.v_company_name := 'ACME';
+  dbms_output.put_line(constants_pkg.v_company_name);
+  dbms_lock.sleep(20);
+end;
+-----------------
+declare
+v_emp employees%rowtype;
+begin
+ open constants_pkg.cur_emps;
+ fetch constants_pkg.cur_emps into v_emp;
+ dbms_output.put_line(v_emp.first_name);
+ close constants_pkg.cur_emps;
+end;
+-----------------
+declare
+v_emp employees%rowtype;
+begin
+ fetch constants_pkg.cur_emps into v_emp;
+ dbms_output.put_line(v_emp.first_name);
+end;
+
+4>>>>>>>>>>
+
+---------------------------------------------------------------------------------------------
+---------------------------------USING COLLECTIONS IN PACKAGES-------------------------------
+---------------------------------------------------------------------------------------------
+   -it will make code more powerful and more efficient, we can also share the collections amoung other subprograms
+
+
+create or replace PACKAGE EMP_PKG AS
+  type emp_table_type is table of employees%rowtype index by pls_integer;
+  v_salary_increase_rate number := 1000;
+  v_min_employee_salary number := 5000;
+  cursor cur_emps is select * from employees;
+
+  procedure increase_salaries;
+  function get_avg_sal(p_dept_id int) return number;
+  v_test int := 4;
+  function get_employees return emp_table_type;
+  function get_employees_tobe_incremented return emp_table_type;
+  procedure increase_low_salaries;
+  function arrange_for_min_salary(v_emp employees%rowtype) return employees%rowtype;
+END EMP_PKG;
+----------------- package body
+create or replace PACKAGE BODY EMP_PKG AS
+
+  v_sal_inc int := 500;
+  v_sal_inc2 int := 500;
+  function get_sal(e_id employees.employee_id%type) return number;
+  procedure print_test is
+  begin
+    dbms_output.put_line('Test : '|| v_sal_inc);
+    dbms_output.put_line('Tests salary :'|| get_sal(102));
+  end;
+
+  procedure increase_salaries AS
+  BEGIN
+    for r1 in cur_emps loop
+      update employees_copy set salary = salary + salary * v_salary_increase_rate
+      where employee_id = r1.employee_id;
+    end loop;
+  END increase_salaries;
+  function get_avg_sal(p_dept_id int) return number AS
+  v_avg_sal number := 0;
+  BEGIN
+  print_test;
+    select avg(salary) into v_avg_sal from employees_copy where
+          department_id = p_dept_id;
+    RETURN v_avg_sal;
+  END get_avg_sal;
+
+  function get_sal(e_id employees.employee_id%type) return number is
+  v_sal number := 0;
+  begin
+    select salary into v_sal from employees where employee_id = e_id;
+    return v_sal;
+  end;
+  /*
+    This function returns all the employees in employees table
+  */
+  function get_employees return emp_table_type is
+  v_emps emp_table_type;
+  begin
+    for cur_emps in (select * from employees_copy) loop
+      v_emps(cur_emps.employee_id) := cur_emps;
+    end loop;
+    return v_emps;
+  end;
+  /*
+    This function returns the employees which are under the minimum salary
+    of the company standards and to be incremented by the new minimum salary
+  */
+  function get_employees_tobe_incremented return emp_table_type is
+  v_emps emp_table_type;
+  i employees.employee_id%type;
+  begin
+  v_emps := get_employees;
+  i := v_emps.first;
+    while i is not null loop
+      if v_emps(i).salary > v_min_employee_salary then
+        v_emps.delete(i);
+      end if;
+      i := v_emps.next(i);
+    end loop;
+    return v_emps;
+  end;
+  /*
+    This procedure increases the salary of the employees who has a less salary
+    then the company standard
+  */
+  procedure increase_low_salaries as
+  v_emps emp_table_type;
+  v_emp employees%rowtype;
+  i employees.employee_id%type;
+  begin
+  v_emps := get_employees_tobe_incremented;
+    i := v_emps.first;
+    while i is not null loop
+    v_emp := arrange_for_min_salary(v_emps(i));
+      update employees_copy set row = v_emp
+        where employee_id = i;
+    i := v_emps.next(i);
+    end loop;
+  end increase_low_salaries;
+  /*
+    This function returns the employee by arranging the salary based on the
+    company standard.
+  */
+  function arrange_for_min_salary(v_emp in out employees%rowtype) return employees%rowtype is
+  begin
+    v_emp.salary := v_emp.salary + v_salary_increase_rate;
+    if v_emp.salary < v_min_employee_salary then
+      v_emp.salary := v_min_employee_salary;
+    end if;
+    return v_emp;
+  end;
+  /**********************************************/
+  /*package initialization*/
+BEGIN
+  v_salary_increase_rate := 500;
+  insert into logs values ('EMP_PKG','Package initialized!',sysdate);
+END EMP_PKG;
+
+==========================================================================
+select * from hr.employees;
+select * from employees_copy;
+truncate table employees_copy;
+------------------------------------
+insert into employees_copy  select * from hr.employees;
+-----------------------------------
+execute emp_pkg.increase_low_salaries;
+--------------------------------------
+select * from employees_copy where salary <5000;
+
+
+----------------------------------*********************-------------------------------
+find packages:
+--------------
+
+two ways:
+1.sql developer tool
+2.Data dictionary views
+    >>>>>the data dictionary views that you can find some information about the packages are:
+                          -USER_SOURCE/ALL_SOURCE/DBA_SOURCE
+                                                  -USER_OBJECTS/ALL_OBJECTS/DBA_OBJECTS
+
+    *select * from user_source;
+        *select * from user_source where type='PACKAGE BODY' and name ='EMP_PKG';
+
+        important info for DBA and develper is toc check status of the objects
+        *select * from user_objects;
+        *select * from user_objects where object_type='PACKAGE BODY' and object_name ='EMP_PKG';
+
+        select * from user_objects where status ='invalid';
+
+select * from user_source;
+
+select * from user_source where type='PACKAGE BODY' and name ='EMP_PKG';
+select * from user_objects;
+
+select * from user_objects where object_type='PACKAGE BODY' and object_name ='EMP_PKG';
+
+select * from user_objects where status ='invalid';
+
+
+https://github.com/porpup/PL-SQL_TRIGGER
+
+https://github.com/srikanthpragada/plsql
+
+https://github.com/JieunKwon/PL_SQL_Procedure_Function
+
+https://github.com/graf-script/plsql-procedure/blob/main/plsql
+
+https://github.com/porpup/PL-SQL_PROCEDURE_Overloading/blob/master/projectPart9.sql
+
+https://github.com/porpup/SQL_Final_Exam
+
+https://github.com/porpup/PL-SQL_Final_Exam
+
+https://github.com/porpup/PL-SQL_VIEW
+
+https://github.com/porpup/PL-SQL_PACKAGE
+
+https://github.com/porpup/PL-SQL_CURSOR_FOR_LOOP
+
+https://github.com/porpup/PL-SQL_CURSOR_with_parameters
+
+https://github.com/porpup/PL-SQL_CURSOR_LOOPs
+
+https://github.com/porpup/PL-SQL_Parameter_Mode
+
+https://github.com/porpup/PL-SQL_SELECT_INTO
+
+https://github.com/porpup/PL-SQL_IF_condition
+
+https://github.com/naveen8853/Ex-No-5-Creating-Triggers-using-PL-SQL
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ cal 2023
+                               2023
+
+       January               February                 March
+Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa
+ 1  2  3  4  5  6  7             1  2  3  4             1  2  3  4
+ 8  9 10 11 12 13 14    5  6  7  8  9 10 11    5  6  7  8  9 10 11
+15 16 17 18 19 20 21   12 13 14 15 16 17 18   12 13 14 15 16 17 18
+22 23 24 25 26 27 28   19 20 21 22 23 24 25   19 20 21 22 23 24 25
+29 30 31               26 27 28               26 27 28 29 30 31
+
+        April                   May                   June
+Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa
+                   1       1  2  3  4  5  6                1  2  3
+ 2  3  4  5  6  7  8    7  8  9 10 11 12 13    4  5  6  7  8  9 10
+ 9 10 11 12 13 14 15   14 15 16 17 18 19 20   11 12 13 14 15 16 17
+16 17 18 19 20 21 22   21 22 23 24 25 26 27   18 19 20 21 22 23 24
+23 24 25 26 27 28 29   28 29 30 31            25 26 27 28 29 30
+30
+        July                  August                September
+Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa
+                   1          1  2  3  4  5                   1  2
+ 2  3  4  5  6  7  8    6  7  8  9 10 11 12    3  4  5  6  7  8  9
+ 9 10 11 12 13 14 15   13 14 15 16 17 18 19   10 11 12 13 14 15 16
+16 17 18 19 20 21 22   20 21 22 23 24 25 26   17 18 19 20 21 22 23
+23 24 25 26 27 28 29   27 28 29 30 31         24 25 26 27 28 29 30
+30 31
+       October               November               December
+Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa
+ 1  2  3  4  5  6  7             1  2  3  4                   1  2
+ 8  9 10 11 12 13 14    5  6  7  8  9 10 11    3  4  5  6  7  8  9
+15 16 17 18 19 20 21   12 13 14 15 16 17 18   10 11 12 13 14 15 16
+22 23 24 25 26 27 28   19 20 21 22 23 24 25   17 18 19 20 21 22 23
+29 30 31               26 27 28 29 30         24 25 26 27 28 29 30
+                                              31
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$
+exit
+Script done, file is typescript
+
+Lenovo@DESKTOP-HAGIJ1L ~
+$ ls -ltr
+total 20
+drwxr-xr-x 1 Lenovo None     0 Feb 10 18:01 unix_demo
+-rw-r--r-- 1 Lenovo None 18526 Feb 11 23:37 typescript
+
+Lenovo@DESKTOP-HAGIJ1L ~
+$ cat typescript
+Script started on 2024-02-11 23:36:08+05:30 [TERM="xterm" TTY="/dev/pty1" COLUMNS="79" LINES="48"]
+
+Lenovo@DESKTOP-HAGIJ1L ~
+$ ls
+typescript  unix_demo
+
+Lenovo@DESKTOP-HAGIJ1L ~
+$ cd e:
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ ls
+'!qhlogs.doc'                               'New folder'
+'$RECYCLE.BIN'                               PACKAGES.txt
+ 10699226_SQLFILES                           Seriese
+ 14SpringJDBCTemplate-20220311T042247Z-001  'Sping MVC -20220310T063616Z-001'
+ Azure                                      'System Volume Information'
+ C_TO_E                                      angular
+'Combined Community Codec Pack 64bit'        eclipse
+ Config.Msi                                  first-spring-boot-project
+ Drivers                                    'folder CCCCC'
+ EclipseWorkplace                            hibernateusageprocedure.txt
+ GITHUBF                                    'java programming language'
+ Hibernet                                    java-2021-06
+ INtroduction                                java1.8
+ JDeveloper                                  java8
+ LNTDEVops                                   k20
+ LNTJAVA                                     lntproject
+ LNTSQLDB                                    movies
+ LNTWEB                                      ngrok-stable-windows-amd64
+ LNT_JENKINS                                 oracle
+ LNT_MAVEN                                   packages_copy_updated_name.txt
+ LNT_NGROK                                   photos
+ Music                                       practice
+ NEW_FILE                                    soa_softwares
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ cat packages.txt
+lkjC
+creating and using packages:
+
+packages are the container which can have procedures,functions,variables,types,collections,exceptions and ...
+
+
+Advantages of packages:
+    -Modularity  (we can use and share different objects in the packages like subprograms )
+    -Easy Maintenance
+    -Encapsulation and security(other users cant access the info ,
+        if u specified it in the pacakage body, but for the all users we can specify the data in the package spec)
+        -Functionality
+        -Performance
+        -OverLoading(in packages overloding is easy and faster)
+
+
+main two reasons of using packages:
+         1.Logically grouping of objects (it reduces the code complexity and crowded code);
+                 2.Performance
+
+
+
+
+        package object visibility:
+        1.local variables  (only accessible to its own object, declared in the subprograms)
+        2.public variables  (accessible to all who as privilage to access,declared in the package spec)
+        3.private variables  (accessible for all objects within the package body, its declared in the package body)
+
+        PERSISTENT state of packages:
+        ---------------------------
+  PGA(Program/private global area):>(its stores the objects,variables, no other users can see or touch/reach these objects, every user has there own PGA'S)
+
+
+                                                                                        Storage(obj,var,codes,packages)
+
+
+  SGA(System/shared global area):>>its stored shared objects,valuses,codes,packages for all other users
+
+
+note : pga and sga refer to same memory with diff name
+
+
+1>>>>>
+
+--------------------------------------------------------------------------------------------------------------------
+--------------------------------------------CREATING & USING PACKAGES-----------------------------------------------
+--------------------------------------------------------------------------------------------------------------------
+----------------- Creating first package specification
+CREATE OR REPLACE
+PACKAGE EMP AS
+  v_salary_increase_rate number := 0.057;
+  cursor cur_emps is select * from employees;
+
+  procedure increase_salaries;
+  function get_avg_sal(p_dept_id int) return number;
+END EMP;
+----------------- Creating the package body
+CREATE OR REPLACE
+PACKAGE BODY EMP AS
+  procedure increase_salaries AS
+  BEGIN
+    for r1 in cur_emps loop
+      update employees_copy set salary = salary + salary * v_salary_increase_rate;
+    end loop;
+  END increase_salaries;
+  function get_avg_sal(p_dept_id int) return number AS
+  v_avg_sal number := 0;
+  BEGIN
+    select avg(salary) into v_avg_sal from employees_copy where
+          department_id = p_dept_id;
+    RETURN v_avg_sal;
+  END get_avg_sal;
+END EMP;
+----------------- using the subprograms in packages
+exec EMP_PKG.increase_salaries;
+----------------- using the variables in packages
+begin
+  dbms_output.put_line(emp_pkg.get_avg_sal(50));
+  dbms_output.put_line(emp_pkg.v_salary_increase_rate);
+end;
+
+2>>>>>
+
+---------------------------------------------------------------------------------------------
+--------------------------------VISIBILITY OF VARIABLES IN PACKAGES--------------------------
+---------------------------------------------------------------------------------------------
+create or replace PACKAGE BODY EMP_PKG AS
+
+  v_sal_inc int := 500;
+  v_sal_inc2 int := 500;
+
+  procedure print_test is
+  begin
+    dbms_output.put_line('Test : '|| v_sal_inc);
+  end;
+
+  procedure increase_salaries AS
+  BEGIN
+    for r1 in cur_emps loop
+      update employees_copy set salary = salary + salary * v_salary_increase_rate
+      where employee_id = r1.employee_id;
+    end loop;
+  END increase_salaries;
+  function get_avg_sal(p_dept_id int) return number AS
+  v_avg_sal number := 0;
+  BEGIN
+    print_test;
+    select avg(salary) into v_avg_sal from employees_copy where
+          department_id = p_dept_id;
+    RETURN v_avg_sal;
+  END get_avg_sal;
+
+END EMP_PKG;
+
+ --------illegal object Reference and Forward declaration--------------------------------
+-----------------
+create or replace PACKAGE BODY EMP_PKG AS
+
+  v_sal_inc int := 500;
+  v_sal_inc2 int := 500;
+  function get_sal(e_id employees.employee_id%type) return number;
+
+procedure print_test is
+  begin
+    dbms_output.put_line('Test : '|| v_sal_inc);
+    dbms_output.put_line('Test salary : '|| get_sal(102));
+  end;
+  procedure increase_salaries AS
+  BEGIN
+    for r1 in cur_emps loop
+      update employees_copy set salary = salary + salary * v_salary_increase_rate
+      where employee_id = r1.employee_id;
+    end loop;
+  END increase_salaries;
+  function get_avg_sal(p_dept_id int) return number AS
+  v_avg_sal number := 0;
+  BEGIN
+    print_test;
+    select avg(salary) into v_avg_sal from employees_copy where
+          department_id = p_dept_id;
+    RETURN v_avg_sal;
+  END get_avg_sal;
+
+  function get_sal(e_id employees.employee_id%type) return number is
+  v_sal number := 0;
+  begin
+    select salary into v_sal from employees where employee_id = e_id;
+  end;
+
+end;
+   -------------------------------------Package Initialization---------------------
+
+      create or replace PACKAGE BODY EMP_PKG AS
+
+  v_sal_inc int := 500;
+  v_sal_inc2 int := 500;
+
+  procedure increase_salaries AS
+  BEGIN
+    for r1 in cur_emps loop
+      update employee_cpy set salary = salary + salary * v_salary_increase_rate
+      where employee_id = r1.employee_id;
+    end loop;
+  END increase_salaries;
+  function get_avg_sal(p_dept_id int) return number AS
+  v_avg_sal number := 0;
+  BEGIN
+    select avg(salary) into v_avg_sal from employee_cpy where
+          department_id = p_dept_id;
+    RETURN v_avg_sal;
+  END get_avg_sal;
+begin
+    -- It will overiden the previously initialiazed values in the package spec
+      v_salary_increase_rate :=1500;
+      insert into logs values('EMP_PKG','Package Initialiazed',sysdate);
+END EMP_PKG;
+
+create table logs(log_source varchar2(100),log_message varchar2(1000),log_date date);
+
+exec dbms_output.put_line(emp_pkg.get_avg_sal(100));
+exec dbms_output.put_line(emp_pkg.v_salary_increase_rate);
+
+select * from logs;
+desc logs;
+
+
+
+3>>>>
+---------------------------------------------------------------------------------------------
+----------------------------------PERSISTENT STATE OF PACKAGES-------------------------------
+---------------------------------------------------------------------------------------------
+-----------------
+execute dbms_output.put_line(constants_pkg.v_salary_increase);
+grant execute on constants_pkg to my_user;
+revoke execute on constants_pkg from my_user;
+-----------------
+-----------------
+begin
+  constants_pkg.v_company_name := 'ACME';
+  dbms_output.put_line(constants_pkg.v_company_name);
+  dbms_lock.sleep(20);
+end;
+exec dbms_output.put_line(constants_pkg.v_company_name);
+-----------------
+create or replace package constants_pkg is
+PRAGMA SERIALLY_REUSABLE;
+  v_salary_increase constant number:= 0.04;
+  cursor cur_emps is select * from employees;
+  t_emps_type employees%rowtype;
+  v_company_name varchar2(20) := 'ORACLE';
+end;
+-----------------
+begin
+  constants_pkg.v_company_name := 'ACME';
+  dbms_output.put_line(constants_pkg.v_company_name);
+  dbms_lock.sleep(20);
+end;
+-----------------
+declare
+v_emp employees%rowtype;
+begin
+ open constants_pkg.cur_emps;
+ fetch constants_pkg.cur_emps into v_emp;
+ dbms_output.put_line(v_emp.first_name);
+ close constants_pkg.cur_emps;
+end;
+-----------------
+declare
+v_emp employees%rowtype;
+begin
+ fetch constants_pkg.cur_emps into v_emp;
+ dbms_output.put_line(v_emp.first_name);
+end;
+
+4>>>>>>>>>>
+
+---------------------------------------------------------------------------------------------
+---------------------------------USING COLLECTIONS IN PACKAGES-------------------------------
+---------------------------------------------------------------------------------------------
+   -it will make code more powerful and more efficient, we can also share the collections amoung other subprograms
+
+
+create or replace PACKAGE EMP_PKG AS
+  type emp_table_type is table of employees%rowtype index by pls_integer;
+  v_salary_increase_rate number := 1000;
+  v_min_employee_salary number := 5000;
+  cursor cur_emps is select * from employees;
+
+  procedure increase_salaries;
+  function get_avg_sal(p_dept_id int) return number;
+  v_test int := 4;
+  function get_employees return emp_table_type;
+  function get_employees_tobe_incremented return emp_table_type;
+  procedure increase_low_salaries;
+  function arrange_for_min_salary(v_emp employees%rowtype) return employees%rowtype;
+END EMP_PKG;
+----------------- package body
+create or replace PACKAGE BODY EMP_PKG AS
+
+  v_sal_inc int := 500;
+  v_sal_inc2 int := 500;
+  function get_sal(e_id employees.employee_id%type) return number;
+  procedure print_test is
+  begin
+    dbms_output.put_line('Test : '|| v_sal_inc);
+    dbms_output.put_line('Tests salary :'|| get_sal(102));
+  end;
+
+  procedure increase_salaries AS
+  BEGIN
+    for r1 in cur_emps loop
+      update employees_copy set salary = salary + salary * v_salary_increase_rate
+      where employee_id = r1.employee_id;
+    end loop;
+  END increase_salaries;
+  function get_avg_sal(p_dept_id int) return number AS
+  v_avg_sal number := 0;
+  BEGIN
+  print_test;
+    select avg(salary) into v_avg_sal from employees_copy where
+          department_id = p_dept_id;
+    RETURN v_avg_sal;
+  END get_avg_sal;
+
+  function get_sal(e_id employees.employee_id%type) return number is
+  v_sal number := 0;
+  begin
+    select salary into v_sal from employees where employee_id = e_id;
+    return v_sal;
+  end;
+  /*
+    This function returns all the employees in employees table
+  */
+  function get_employees return emp_table_type is
+  v_emps emp_table_type;
+  begin
+    for cur_emps in (select * from employees_copy) loop
+      v_emps(cur_emps.employee_id) := cur_emps;
+    end loop;
+    return v_emps;
+  end;
+  /*
+    This function returns the employees which are under the minimum salary
+    of the company standards and to be incremented by the new minimum salary
+  */
+  function get_employees_tobe_incremented return emp_table_type is
+  v_emps emp_table_type;
+  i employees.employee_id%type;
+  begin
+  v_emps := get_employees;
+  i := v_emps.first;
+    while i is not null loop
+      if v_emps(i).salary > v_min_employee_salary then
+        v_emps.delete(i);
+      end if;
+      i := v_emps.next(i);
+    end loop;
+    return v_emps;
+  end;
+  /*
+    This procedure increases the salary of the employees who has a less salary
+    then the company standard
+  */
+  procedure increase_low_salaries as
+  v_emps emp_table_type;
+  v_emp employees%rowtype;
+  i employees.employee_id%type;
+  begin
+  v_emps := get_employees_tobe_incremented;
+    i := v_emps.first;
+    while i is not null loop
+    v_emp := arrange_for_min_salary(v_emps(i));
+      update employees_copy set row = v_emp
+        where employee_id = i;
+    i := v_emps.next(i);
+    end loop;
+  end increase_low_salaries;
+  /*
+    This function returns the employee by arranging the salary based on the
+    company standard.
+  */
+  function arrange_for_min_salary(v_emp in out employees%rowtype) return employees%rowtype is
+  begin
+    v_emp.salary := v_emp.salary + v_salary_increase_rate;
+    if v_emp.salary < v_min_employee_salary then
+      v_emp.salary := v_min_employee_salary;
+    end if;
+    return v_emp;
+  end;
+  /**********************************************/
+  /*package initialization*/
+BEGIN
+  v_salary_increase_rate := 500;
+  insert into logs values ('EMP_PKG','Package initialized!',sysdate);
+END EMP_PKG;
+
+==========================================================================
+select * from hr.employees;
+select * from employees_copy;
+truncate table employees_copy;
+------------------------------------
+insert into employees_copy  select * from hr.employees;
+-----------------------------------
+execute emp_pkg.increase_low_salaries;
+--------------------------------------
+select * from employees_copy where salary <5000;
+
+
+----------------------------------*********************-------------------------------
+find packages:
+--------------
+
+two ways:
+1.sql developer tool
+2.Data dictionary views
+    >>>>>the data dictionary views that you can find some information about the packages are:
+                          -USER_SOURCE/ALL_SOURCE/DBA_SOURCE
+                                                  -USER_OBJECTS/ALL_OBJECTS/DBA_OBJECTS
+
+    *select * from user_source;
+        *select * from user_source where type='PACKAGE BODY' and name ='EMP_PKG';
+
+        important info for DBA and develper is toc check status of the objects
+        *select * from user_objects;
+        *select * from user_objects where object_type='PACKAGE BODY' and object_name ='EMP_PKG';
+
+        select * from user_objects where status ='invalid';
+
+select * from user_source;
+
+select * from user_source where type='PACKAGE BODY' and name ='EMP_PKG';
+select * from user_objects;
+
+select * from user_objects where object_type='PACKAGE BODY' and object_name ='EMP_PKG';
+
+select * from user_objects where status ='invalid';
+
+
+https://github.com/porpup/PL-SQL_TRIGGER
+
+https://github.com/srikanthpragada/plsql
+
+https://github.com/JieunKwon/PL_SQL_Procedure_Function
+
+https://github.com/graf-script/plsql-procedure/blob/main/plsql
+
+https://github.com/porpup/PL-SQL_PROCEDURE_Overloading/blob/master/projectPart9.sql
+
+https://github.com/porpup/SQL_Final_Exam
+
+https://github.com/porpup/PL-SQL_Final_Exam
+
+https://github.com/porpup/PL-SQL_VIEW
+
+https://github.com/porpup/PL-SQL_PACKAGE
+
+https://github.com/porpup/PL-SQL_CURSOR_FOR_LOOP
+
+https://github.com/porpup/PL-SQL_CURSOR_with_parameters
+
+https://github.com/porpup/PL-SQL_CURSOR_LOOPs
+
+https://github.com/porpup/PL-SQL_Parameter_Mode
+
+https://github.com/porpup/PL-SQL_SELECT_INTO
+
+https://github.com/porpup/PL-SQL_IF_condition
+
+https://github.com/naveen8853/Ex-No-5-Creating-Triggers-using-PL-SQL
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ cal 2023
+                               2023
+
+       January               February                 March
+Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa
+ 1  2  3  4  5  6  7             1  2  3  4             1  2  3  4
+ 8  9 10 11 12 13 14    5  6  7  8  9 10 11    5  6  7  8  9 10 11
+15 16 17 18 19 20 21   12 13 14 15 16 17 18   12 13 14 15 16 17 18
+22 23 24 25 26 27 28   19 20 21 22 23 24 25   19 20 21 22 23 24 25
+29 30 31               26 27 28               26 27 28 29 30 31
+
+        April                   May                   June
+Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa
+                   1       1  2  3  4  5  6                1  2  3
+ 2  3  4  5  6  7  8    7  8  9 10 11 12 13    4  5  6  7  8  9 10
+ 9 10 11 12 13 14 15   14 15 16 17 18 19 20   11 12 13 14 15 16 17
+16 17 18 19 20 21 22   21 22 23 24 25 26 27   18 19 20 21 22 23 24
+23 24 25 26 27 28 29   28 29 30 31            25 26 27 28 29 30
+30
+        July                  August                September
+Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa
+                   1          1  2  3  4  5                   1  2
+ 2  3  4  5  6  7  8    6  7  8  9 10 11 12    3  4  5  6  7  8  9
+ 9 10 11 12 13 14 15   13 14 15 16 17 18 19   10 11 12 13 14 15 16
+16 17 18 19 20 21 22   20 21 22 23 24 25 26   17 18 19 20 21 22 23
+23 24 25 26 27 28 29   27 28 29 30 31         24 25 26 27 28 29 30
+30 31
+       October               November               December
+Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa
+ 1  2  3  4  5  6  7             1  2  3  4                   1  2
+ 8  9 10 11 12 13 14    5  6  7  8  9 10 11    3  4  5  6  7  8  9
+15 16 17 18 19 20 21   12 13 14 15 16 17 18   10 11 12 13 14 15 16
+22 23 24 25 26 27 28   19 20 21 22 23 24 25   17 18 19 20 21 22 23
+29 30 31               26 27 28 29 30         24 25 26 27 28 29 30
+                                              31
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$
+exit
+
+Script done on 2024-02-11 23:37:15+05:30 [COMMAND_EXIT_CODE="0"]
+
+Lenovo@DESKTOP-HAGIJ1L ~
+$ ls -ltr
+total 20
+drwxr-xr-x 1 Lenovo None     0 Feb 10 18:01 unix_demo
+-rw-r--r-- 1 Lenovo None 18526 Feb 11 23:37 typescript
+
+Lenovo@DESKTOP-HAGIJ1L ~
+$ alias l="ls -ltr"
+
+Lenovo@DESKTOP-HAGIJ1L ~
+$ l
+total 20
+drwxr-xr-x 1 Lenovo None     0 Feb 10 18:01 unix_demo
+-rw-r--r-- 1 Lenovo None 18526 Feb 11 23:37 typescript
+
+Lenovo@DESKTOP-HAGIJ1L ~
+$ cd e:
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ l
+ls: Config.Msi: Permission denied
+ls: 'System Volume Information': Permission denied
+total 313
+----rwx---+ 1 Unknown+User   Unknown+Group 22528 May 12  2021 '!qhlogs.doc'
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Dec 11  2021  angular
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Dec 11  2021 'Combined Community Codec Pack 64bit'
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Dec 11  2021  Drivers
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Dec 11  2021  Music
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Dec 22  2021  eclipse
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Jan 18  2022 'java programming language'
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Jan 24  2022  practice
+d---r-x---+ 1 Unknown+User   Unknown+Group     0 Jan 26  2022  k20
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Feb 13  2022  10699226_SQLFILES
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Feb 19  2022  INtroduction
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Feb 20  2022  LNTSQLDB
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Feb 27  2022  LNTJAVA
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Feb 27  2022  C_TO_E
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Feb 28  2022  LNTWEB
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar  3  2022  LNT_JENKINS
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar  3  2022  LNT_MAVEN
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar  3  2022  ngrok-stable-windows-amd64
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar  3  2022  LNT_NGROK
+----rwx---+ 1 Unknown+User   Unknown+Group  3379 Mar  4  2022  hibernateusageprocedure.txt
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar 10  2022 'Sping MVC -20220310T063616Z-001'
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar 10  2022  EclipseWorkplace
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar 11  2022  14SpringJDBCTemplate-20220311T042247Z-001
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar 11  2022  java-2021-06
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar 11  2022  first-spring-boot-project
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar 15  2022  LNTDEVops
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar 15  2022  Hibernet
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar 17  2022 'folder CCCCC'
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar 24  2022  lntproject
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar 29  2022  Azure
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Apr 20  2022  GITHUBF
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Sep 24  2022  java8
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Sep 24  2022  java1.8
+drwxr-x---  1 Unknown+User   Unknown+Group     0 Sep 28  2022  Config.Msi
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Sep 30  2022  JDeveloper
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Dec  2  2022  photos
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar  2  2023  soa_softwares
+drwxr-x---  1 Unknown+User   Unknown+Group     0 Jul  6  2023 'System Volume Information'
+drwxrwx---+ 1 Administrators Unknown+Group     0 Jul  7  2023  oracle
+d---r-x---+ 1 Unknown+User   Unknown+Group     0 Jan 28 18:01 '$RECYCLE.BIN'
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Feb  9 10:20  Seriese
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Feb  9 10:27  movies
+-rw-rw-r--+ 1 Lenovo         None             99 Feb 11 12:03  NEW_FILE
+-rwxrwx---+ 1 Lenovo         None          14227 Feb 11 12:06  PACKAGES.txt
+-rwxrwx---+ 1 Lenovo         None          14227 Feb 11 13:06  packages_copy_updated_name.txt
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Feb 11 18:03 'New folder'
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ alias -p
+alias l='ls -ltr'
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ cd 'new folder'
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ l
+total 51
+d---rwx---+ 1 Unknown+User Unknown+Group     0 Dec 11  2021 'Learn Python Programming Masterclass'
+-rw-rw-r--+ 1 Lenovo       None              0 Feb 11 12:59  new_file
+----rwx---+ 1 Lenovo       None          22528 Feb 11 13:06 '!qhlogs.doc'
+-rwxrwx---+ 1 Lenovo       None          14260 Feb 11 16:10  packages.txt
+-rw-rw-r--+ 1 Lenovo       None             26 Feb 11 16:19  file_sort
+-rw-rw-r--+ 1 Lenovo       None             10 Feb 11 16:24  xaa
+-rw-rw-r--+ 1 Lenovo       None             10 Feb 11 16:24  xab
+-rw-rw-r--+ 1 Lenovo       None              6 Feb 11 16:24  xac
+-rw-rw-r--+ 1 Lenovo       None              0 Feb 11 17:42  file_name4
+-rw-rw-r--+ 1 Lenovo       None              0 Feb 11 17:42  file_name5
+-rw-rw-r--+ 1 Lenovo       None              0 Feb 11 17:42  file_name6
+-rw-rw-r--+ 1 Lenovo       None              0 Feb 11 17:42  file_name7
+-rw-rw-r--+ 1 Lenovo       None              0 Feb 11 17:42  file_name8
+-rw-rw-r--+ 1 Lenovo       None              0 Feb 11 17:42  file_name9
+-rw-rw-r--+ 1 Lenovo       None              0 Feb 11 17:42  file_name10
+-rw-rw-r--+ 1 Lenovo       None             37 Feb 11 18:01  file_name1
+-rw-rw-r--+ 1 Lenovo       None             36 Feb 11 18:02  file_name2
+-rw-rw-r--+ 1 Lenovo       None             37 Feb 11 18:03  file_name3
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ gzip -k file_name1
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ gzip -k file_name2
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ l
+total 53
+d---rwx---+ 1 Unknown+User Unknown+Group     0 Dec 11  2021 'Learn Python Programming Masterclass'
+-rw-rw-r--+ 1 Lenovo       None              0 Feb 11 12:59  new_file
+----rwx---+ 1 Lenovo       None          22528 Feb 11 13:06 '!qhlogs.doc'
+-rwxrwx---+ 1 Lenovo       None          14260 Feb 11 16:10  packages.txt
+-rw-rw-r--+ 1 Lenovo       None             26 Feb 11 16:19  file_sort
+-rw-rw-r--+ 1 Lenovo       None             10 Feb 11 16:24  xaa
+-rw-rw-r--+ 1 Lenovo       None             10 Feb 11 16:24  xab
+-rw-rw-r--+ 1 Lenovo       None              6 Feb 11 16:24  xac
+-rw-rw-r--+ 1 Lenovo       None              0 Feb 11 17:42  file_name4
+-rw-rw-r--+ 1 Lenovo       None              0 Feb 11 17:42  file_name5
+-rw-rw-r--+ 1 Lenovo       None              0 Feb 11 17:42  file_name6
+-rw-rw-r--+ 1 Lenovo       None              0 Feb 11 17:42  file_name7
+-rw-rw-r--+ 1 Lenovo       None              0 Feb 11 17:42  file_name8
+-rw-rw-r--+ 1 Lenovo       None              0 Feb 11 17:42  file_name9
+-rw-rw-r--+ 1 Lenovo       None              0 Feb 11 17:42  file_name10
+-rw-rw-r--+ 1 Lenovo       None             68 Feb 11 18:01  file_name1.gz
+-rw-rw-r--+ 1 Lenovo       None             37 Feb 11 18:01  file_name1
+-rw-rw-r--+ 1 Lenovo       None             62 Feb 11 18:02  file_name2.gz
+-rw-rw-r--+ 1 Lenovo       None             36 Feb 11 18:02  file_name2
+-rw-rw-r--+ 1 Lenovo       None             37 Feb 11 18:03  file_name3
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ rm file_name1
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ rm file_name2
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ gunzip file_name2
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ l
+total 51
+d---rwx---+ 1 Unknown+User Unknown+Group     0 Dec 11  2021 'Learn Python Programming Masterclass'
+-rw-rw-r--+ 1 Lenovo       None              0 Feb 11 12:59  new_file
+----rwx---+ 1 Lenovo       None          22528 Feb 11 13:06 '!qhlogs.doc'
+-rwxrwx---+ 1 Lenovo       None          14260 Feb 11 16:10  packages.txt
+-rw-rw-r--+ 1 Lenovo       None             26 Feb 11 16:19  file_sort
+-rw-rw-r--+ 1 Lenovo       None             10 Feb 11 16:24  xaa
+-rw-rw-r--+ 1 Lenovo       None             10 Feb 11 16:24  xab
+-rw-rw-r--+ 1 Lenovo       None              6 Feb 11 16:24  xac
+-rw-rw-r--+ 1 Lenovo       None              0 Feb 11 17:42  file_name4
+-rw-rw-r--+ 1 Lenovo       None              0 Feb 11 17:42  file_name5
+-rw-rw-r--+ 1 Lenovo       None              0 Feb 11 17:42  file_name6
+-rw-rw-r--+ 1 Lenovo       None              0 Feb 11 17:42  file_name7
+-rw-rw-r--+ 1 Lenovo       None              0 Feb 11 17:42  file_name8
+-rw-rw-r--+ 1 Lenovo       None              0 Feb 11 17:42  file_name9
+-rw-rw-r--+ 1 Lenovo       None              0 Feb 11 17:42  file_name10
+-rw-rw-r--+ 1 Lenovo       None             68 Feb 11 18:01  file_name1.gz
+-rw-rw-r--+ 1 Lenovo       None             36 Feb 11 18:02  file_name2
+-rw-rw-r--+ 1 Lenovo       None             37 Feb 11 18:03  file_name3
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ gzip -d file_name1
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ l
+total 51
+d---rwx---+ 1 Unknown+User Unknown+Group     0 Dec 11  2021 'Learn Python Programming Masterclass'
+-rw-rw-r--+ 1 Lenovo       None              0 Feb 11 12:59  new_file
+----rwx---+ 1 Lenovo       None          22528 Feb 11 13:06 '!qhlogs.doc'
+-rwxrwx---+ 1 Lenovo       None          14260 Feb 11 16:10  packages.txt
+-rw-rw-r--+ 1 Lenovo       None             26 Feb 11 16:19  file_sort
+-rw-rw-r--+ 1 Lenovo       None             10 Feb 11 16:24  xaa
+-rw-rw-r--+ 1 Lenovo       None             10 Feb 11 16:24  xab
+-rw-rw-r--+ 1 Lenovo       None              6 Feb 11 16:24  xac
+-rw-rw-r--+ 1 Lenovo       None              0 Feb 11 17:42  file_name4
+-rw-rw-r--+ 1 Lenovo       None              0 Feb 11 17:42  file_name5
+-rw-rw-r--+ 1 Lenovo       None              0 Feb 11 17:42  file_name6
+-rw-rw-r--+ 1 Lenovo       None              0 Feb 11 17:42  file_name7
+-rw-rw-r--+ 1 Lenovo       None              0 Feb 11 17:42  file_name8
+-rw-rw-r--+ 1 Lenovo       None              0 Feb 11 17:42  file_name9
+-rw-rw-r--+ 1 Lenovo       None              0 Feb 11 17:42  file_name10
+-rw-rw-r--+ 1 Lenovo       None             37 Feb 11 18:01  file_name1
+-rw-rw-r--+ 1 Lenovo       None             36 Feb 11 18:02  file_name2
+-rw-rw-r--+ 1 Lenovo       None             37 Feb 11 18:03  file_name3
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ cd ..
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ l
+ls: Config.Msi: Permission denied
+ls: 'System Volume Information': Permission denied
+total 313
+----rwx---+ 1 Unknown+User   Unknown+Group 22528 May 12  2021 '!qhlogs.doc'
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Dec 11  2021  angular
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Dec 11  2021 'Combined Community Codec Pack 64bit'
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Dec 11  2021  Drivers
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Dec 11  2021  Music
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Dec 22  2021  eclipse
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Jan 18  2022 'java programming language'
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Jan 24  2022  practice
+d---r-x---+ 1 Unknown+User   Unknown+Group     0 Jan 26  2022  k20
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Feb 13  2022  10699226_SQLFILES
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Feb 19  2022  INtroduction
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Feb 20  2022  LNTSQLDB
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Feb 27  2022  LNTJAVA
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Feb 27  2022  C_TO_E
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Feb 28  2022  LNTWEB
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar  3  2022  LNT_JENKINS
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar  3  2022  LNT_MAVEN
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar  3  2022  ngrok-stable-windows-amd64
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar  3  2022  LNT_NGROK
+----rwx---+ 1 Unknown+User   Unknown+Group  3379 Mar  4  2022  hibernateusageprocedure.txt
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar 10  2022 'Sping MVC -20220310T063616Z-001'
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar 10  2022  EclipseWorkplace
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar 11  2022  14SpringJDBCTemplate-20220311T042247Z-001
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar 11  2022  java-2021-06
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar 11  2022  first-spring-boot-project
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar 15  2022  LNTDEVops
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar 15  2022  Hibernet
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar 17  2022 'folder CCCCC'
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar 24  2022  lntproject
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar 29  2022  Azure
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Apr 20  2022  GITHUBF
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Sep 24  2022  java8
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Sep 24  2022  java1.8
+drwxr-x---  1 Unknown+User   Unknown+Group     0 Sep 28  2022  Config.Msi
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Sep 30  2022  JDeveloper
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Dec  2  2022  photos
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Mar  2  2023  soa_softwares
+drwxr-x---  1 Unknown+User   Unknown+Group     0 Jul  6  2023 'System Volume Information'
+drwxrwx---+ 1 Administrators Unknown+Group     0 Jul  7  2023  oracle
+d---r-x---+ 1 Unknown+User   Unknown+Group     0 Jan 28 18:01 '$RECYCLE.BIN'
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Feb  9 10:20  Seriese
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Feb  9 10:27  movies
+-rw-rw-r--+ 1 Lenovo         None             99 Feb 11 12:03  NEW_FILE
+-rwxrwx---+ 1 Lenovo         None          14227 Feb 11 12:06  PACKAGES.txt
+-rwxrwx---+ 1 Lenovo         None          14227 Feb 11 13:06  packages_copy_updated_name.txt
+d---rwx---+ 1 Unknown+User   Unknown+Group     0 Feb 11 23:51 'New folder'
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ tar -czf myfiles.tar.gz 'new folder'
+tar: new folder/!qhlogs.doc: Cannot open: Permission denied
+q
+
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ tar -czf myfiles.tar.gz 'New folder'
+tar: New folder/!qhlogs.doc: Cannot open: Permission denied
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ tar -czf myfiles.tar.gz photos
+
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ ls
+'!qhlogs.doc'                                PACKAGES.txt
+'$RECYCLE.BIN'                               Seriese
+ 10699226_SQLFILES                          'Sping MVC -20220310T063616Z-001'
+ 14SpringJDBCTemplate-20220311T042247Z-001  'System Volume Information'
+ Azure                                       angular
+ C_TO_E                                      eclipse
+'Combined Community Codec Pack 64bit'        first-spring-boot-project
+ Config.Msi                                 'folder CCCCC'
+ Drivers                                     hibernateusageprocedure.txt
+ EclipseWorkplace                           'java programming language'
+ GITHUBF                                     java-2021-06
+ Hibernet                                    java1.8
+ INtroduction                                java8
+ JDeveloper                                  k20
+ LNTDEVops                                   lntproject
+ LNTJAVA                                     movies
+ LNTSQLDB                                    myfiles.tar.gz
+ LNTWEB                                      ngrok-stable-windows-amd64
+ LNT_JENKINS                                 oracle
+ LNT_MAVEN                                   packages_copy_updated_name.txt
+ LNT_NGROK                                   photos
+ Music                                       practice
+ NEW_FILE                                    soa_softwares
+'New folder'
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ tar -xzf myfiles.tar.gz
+tar: photos/photos 1/photos 2: Cannot change mode to ---r-x---: Permission denied
+
+gzip: stdin: unexpected end of file
+tar: Unexpected EOF in archive
+tar: Unexpected EOF in archive
+tar: photos/photos 1: Cannot change mode to ---r-x---: Permission denied
+tar: photos: Cannot change mode to ---r-x---: Permission denied
+tar: Error is not recoverable: exiting now
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ cd photos
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/photos
+$ ls
+'Program Files'  'photos 1'
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/photos
+$ cd 'photos 1'
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/photos/photos 1
+$ ls
+ IMG_20180402_192402.jpg   IMG_20200604_131115.jpg
+ IMG_20200121_120039.jpg   IMG_20200605_135330.jpg
+ IMG_20200214_002435.jpg   IMG_20200605_175112.jpg
+ IMG_20200214_002553.jpg   IMG_20200610_074316.jpg
+ IMG_20200214_174205.jpg   IMG_20200610_074344.jpg
+ IMG_20200215_085921.jpg   IMG_20200610_190342.jpg
+ IMG_20200217_194212.jpg   IMG_20200613_214153.jpg
+ IMG_20200226_122204.jpg   IMG_20200616_162849.jpg
+ IMG_20200229_091228.jpg   IMG_20200620_133555.jpg
+ IMG_20200229_091308.jpg   IMG_20200703_124542.jpg
+ IMG_20200229_091631.jpg   IMG_20200703_163817.jpg
+ IMG_20200229_091707.jpg   IMG_20200703_163824.jpg
+ IMG_20200229_091711.jpg   IMG_20200707_212428.jpg
+ IMG_20200229_092003.jpg   IMG_20200709_172234.jpg
+ IMG_20200229_092016.jpg   IMG_20200709_172304.jpg
+ IMG_20200229_092017.jpg   IMG_20200711_113029.jpg
+ IMG_20200229_092154.jpg   IMG_20200713_121117.jpg
+ IMG_20200229_092156.jpg   IMG_20200713_140438.jpg
+ IMG_20200229_092243.jpg   IMG_20200713_140539.jpg
+ IMG_20200303_104903.jpg   IMG_20200717_112851.jpg
+ IMG_20200307_100101.jpg   IMG_20200717_113141.jpg
+ IMG_20200307_175558.jpg   IMG_20200721_104908_HDR.jpg
+ IMG_20200307_175753.jpg   IMG_20200721_172910.jpg
+ IMG_20200307_175850.jpg   IMG_20200721_172935.jpg
+ IMG_20200307_175910.jpg   IMG_20200731_112322_HDR.jpg
+ IMG_20200307_180002.jpg   IMG_20200731_115559_HDR.jpg
+ IMG_20200307_180008.jpg   IMG_20200802_183254.jpg
+ IMG_20200307_180109.jpg   IMG_20200804_190315_HDR.jpg
+ IMG_20200307_185901.jpg   IMG_20200806_114548_HDR.jpg
+ IMG_20200307_185909.jpg   IMG_20200806_114600_HDR.jpg
+ IMG_20200307_185922.jpg   IMG_20200808_102604_HDR.jpg
+ IMG_20200312_142259.jpg   IMG_20200809_105107.jpg
+ IMG_20200315_180156.jpg   IMG_20200809_105122.jpg
+ IMG_20200324_071929.jpg   IMG_20200813_090955.jpg
+ IMG_20200329_072553.jpg   IMG_20200819_140748.jpg
+ IMG_20200402_115828.jpg   IMG_20200821_172138.jpg
+ IMG_20200412_123252.jpg   IMG_20200821_172239.jpg
+ IMG_20200507_181244.jpg   IMG_20200828_100346.jpg
+ IMG_20200509_183736.jpg   IMG_20200828_102411.jpg
+ IMG_20200519_183634.jpg   IMG_20200828_115240.jpg
+ IMG_20200522_163541.jpg   SAVE_20180328_240031.jpeg
+ IMG_20200525_170340.jpg   SAVE_20200303_133947.jpeg
+ IMG_20200525_170357.jpg   VID_20200808_200948.mp4
+ IMG_20200525_170359.jpg  'photos 2'
+ IMG_20200530_133909.jpg
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/photos/photos 1
+$ cd ../..
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ ls
+'!qhlogs.doc'                                PACKAGES.txt
+'$RECYCLE.BIN'                               Seriese
+ 10699226_SQLFILES                          'Sping MVC -20220310T063616Z-001'
+ 14SpringJDBCTemplate-20220311T042247Z-001  'System Volume Information'
+ Azure                                       angular
+ C_TO_E                                      eclipse
+'Combined Community Codec Pack 64bit'        first-spring-boot-project
+ Config.Msi                                 'folder CCCCC'
+ Drivers                                     hibernateusageprocedure.txt
+ EclipseWorkplace                           'java programming language'
+ GITHUBF                                     java-2021-06
+ Hibernet                                    java1.8
+ INtroduction                                java8
+ JDeveloper                                  k20
+ LNTDEVops                                   lntproject
+ LNTJAVA                                     movies
+ LNTSQLDB                                    myfiles.tar.gz
+ LNTWEB                                      ngrok-stable-windows-amd64
+ LNT_JENKINS                                 oracle
+ LNT_MAVEN                                   packages_copy_updated_name.txt
+ LNT_NGROK                                   photos
+ Music                                       practice
+ NEW_FILE                                    soa_softwares
+'New folder'
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e
+$ cd 'new folder'
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ ls
+'!qhlogs.doc'                            file_name3   file_name8     xaa
+'Learn Python Programming Masterclass'   file_name4   file_name9     xab
+ file_name1                              file_name5   file_sort      xac
+ file_name10                             file_name6   new_file
+ file_name2                              file_name7   packages.txt
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ mkdir myArchive
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ ls
+'!qhlogs.doc'                            file_name5   new_file
+'Learn Python Programming Masterclass'   file_name6   packages.txt
+ file_name1                              file_name7   xaa
+ file_name10                             file_name8   xab
+ file_name2                              file_name9   xac
+ file_name3                              file_sort
+ file_name4                              myArchive
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ zip myArchive file_name1 file_name2 file_name3 file_name4
+  adding: file_name1 (408 bytes security) (stored 0%)
+  adding: file_name2 (408 bytes security) (deflated 8%)
+  adding: file_name3 (408 bytes security) (stored 0%)
+  adding: file_name4 (408 bytes security) (stored 0%)
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ ls
+'!qhlogs.doc'                            file_name5   myArchive.zip
+'Learn Python Programming Masterclass'   file_name6   new_file
+ file_name1                              file_name7   packages.txt
+ file_name10                             file_name8   xaa
+ file_name2                              file_name9   xab
+ file_name3                              file_sort    xac
+ file_name4                              myArchive
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ rmdir myArchive
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ ls
+'!qhlogs.doc'                            file_name5      new_file
+'Learn Python Programming Masterclass'   file_name6      packages.txt
+ file_name1                              file_name7      xaa
+ file_name10                             file_name8      xab
+ file_name2                              file_name9      xac
+ file_name3                              file_sort
+ file_name4                              myArchive.zip
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ rmdir myArchive.zip
+rmdir: failed to remove 'myArchive.zip': Not a directory
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ rm -rf myArchive.zip
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ ls
+'!qhlogs.doc'                            file_name3   file_name8     xaa
+'Learn Python Programming Masterclass'   file_name4   file_name9     xab
+ file_name1                              file_name5   file_sort      xac
+ file_name10                             file_name6   new_file
+ file_name2                              file_name7   packages.txt
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ zip myfiles.zip file_name1 file_name2 file_name3 file_name4
+  adding: file_name1 (408 bytes security) (stored 0%)
+  adding: file_name2 (408 bytes security) (deflated 8%)
+  adding: file_name3 (408 bytes security) (stored 0%)
+  adding: file_name4 (408 bytes security) (stored 0%)
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ mkdir myArchive
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ ls
+'!qhlogs.doc'                            file_name5   myfiles.zip
+'Learn Python Programming Masterclass'   file_name6   new_file
+ file_name1                              file_name7   packages.txt
+ file_name10                             file_name8   xaa
+ file_name2                              file_name9   xab
+ file_name3                              file_sort    xac
+ file_name4                              myArchive
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ mv myfiles.zip myArchive
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ ls
+'!qhlogs.doc'                            file_name5   new_file
+'Learn Python Programming Masterclass'   file_name6   packages.txt
+ file_name1                              file_name7   xaa
+ file_name10                             file_name8   xab
+ file_name2                              file_name9   xac
+ file_name3                              file_sort
+ file_name4                              myArchive
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder
+$ cd myArchive
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder/myArchive
+$ ls
+myfiles.zip
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder/myArchive
+$ unzip myfiles.zip
+Archive:  myfiles.zip
+ extracting: file_name1
+  inflating: file_name2
+ extracting: file_name3
+ extracting: file_name4
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder/myArchive
+$ ls
+file_name1  file_name2  file_name3  file_name4  myfiles.zip
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder/myArchive
+$ unzip -l myfiles.zip
+Archive:  myfiles.zip
+  Length      Date    Time    Name
+---------  ---------- -----   ----
+       37  11-02-2024 18:01   file_name1
+       36  11-02-2024 18:02   file_name2
+       37  11-02-2024 18:03   file_name3
+        0  11-02-2024 17:42   file_name4
+---------                     -------
+      110                     4 files
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder/myArchive
+$ ^C
+
+Lenovo@DESKTOP-HAGIJ1L /cygdrive/e/new folder/myArchive
+$
